@@ -1,0 +1,87 @@
+/* ===================================
+   ABOUT SECTION
+=================================== */
+
+.about {
+  height: auto;
+  padding-top: 180px;
+  display: flex;
+  gap: 5px;
+}
+
+.about__image {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.about-image {
+  width: 380px;
+}
+
+.about-text {
+  display: flex;
+  margin-top: 50px;
+  flex-shrink: 2;
+  flex-basis: 50%;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.about-text__block {
+  display: flex;
+  width: 420px;
+  margin: 0 0 70px 0;
+}
+
+.about-text__numb {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #a7a7a7;
+  margin-right: 10px;
+}
+
+/* ===================================
+   MISSION SECTION
+=================================== */
+
+.mission {
+  padding-top: 107px;
+  height: auto;
+  display: flex;
+  gap: 5px;
+}
+
+.mission-wrapper__image {
+  padding-top: 115px;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-wrapper__text {
+  display: flex;
+  width: 400px;
+  padding-top: 250px;
+  padding-left: 120px;
+  flex-shrink: 2;
+  flex-basis: 50%;
+  flex-direction: column;
+  justify-content: start;
+  flex-wrap: nowrap;
+}
+
+.mission__text {
+  font-size: 16px;
+}
+
+.mission__image {
+  width: 459px;
+}

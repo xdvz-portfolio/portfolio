@@ -1,0 +1,113 @@
+{% extends "layout/default.html" %}
+{% set title = "Вход - мб - сервис доставки лицензионной музыки и инструментарий для аудиомаркетинга" %}
+
+{% block content %}
+<div class="input section">
+    <div class="container_center anim_cont">
+
+        <h1 class="input__title sectionTitle wow fadeInUp">Вход для клиентов.</h1>
+
+        <div class="input__content wow fadeInUp">
+            <div class="inputList">
+                <div class="inputList__item">
+                    <div class="inputList__title">Личный музыкальный кабинет</div>
+                    <form class="inputForm" id="inputForm">
+                        <div class="inputForm__row">
+                            <label for="Login">Имя пользователя</label>
+                            <input type="text" id="Login" name="login" value="" placeholder="">
+                        </div>
+                        <div class="inputForm__row">
+                            <label for="Password">Пароль</label>
+                            <input type="password" id="Password" name="password" value="" placeholder="">
+                            <a href="restore.html" class="password">Забыли пароль?</a>
+                        </div>
+						<div class="inputForm__row">
+							<input type="checkbox" name="check1" id="check1" value="">
+							<label class="label__check" for="check1">Запомнить</label>
+						</div>
+                        <div class="inputForm__row">
+                            <a href="#" id="submitForm" class="btn disabled">Войти</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="inputList__item">
+                    <div class="inputList__title">У Вас еще нет доступа?</div>
+                    <div class="inputList__access"><a href="request.html">Получить тестовый или полный доступ.</a></div>
+                    <div class="inputList__img">
+                        <img src="img/input.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% include "partials/mbc.html" %}
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript">
+    $(document)['ready'](function () {
+        var formSubmit = $('#submitForm');
+        var form = $("#inputForm");
+
+        formSubmit.on('click', function (event) {
+            event.preventDefault();
+            if(!form.valid()) return;
+
+            var jsonData = getFormData($(form));
+            $.ajax({
+                url: 'login.php',
+                method: 'POST',
+                data: JSON.stringify(jsonData),
+                dataType: "html",
+                contentType: "application/json;charset=utf-8",
+                success: function(data, status, xhr) {
+                    jsonData = JSON.parse(data);
+                    if (window.location.href.indexOf('localhost:') > 0) {
+                        window.location.href = 'http://localhost:5000/api/v1/session/auth/' + jsonData['code'];
+                    } else {
+                        window.location.href = 'https://app.mb.cloud/api/v1/session/auth/' + jsonData['code'];
+                    }
+                },
+                error: function(err, textStatus, errorThrown) {
+                    form.trigger('reset');
+                    $("#Login").addClass("error");
+                    $("#Password").addClass("error");
+                    $("#submitForm").addClass("disabled");
+                }
+            });
+        });
+
+        form.validate({
+            errorPlacement: function(error, element) {
+                //just nothing, empty
+            },
+            rules: {
+                login: {
+                    "required": !![],
+                    "minlength": 3
+                },
+                password: {
+                    "required": !![],
+                    "minlength": 5
+                },
+            },
+            messages: {
+                "login": "",
+                "password": ""
+            }
+        });
+
+        $('input, select', form).bind('keyup blur click change', function () {
+            if (form.validate().checkForm()) {
+                formSubmit.removeClass('disabled');
+            } else {
+                formSubmit.addClass('disabled');
+            }
+        });
+    });
+</script>
+{% endblock %}

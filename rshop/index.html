@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rshop Theme Dev Server</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      h1 {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .note {
+        background-color: #fffde7;
+        border-left: 4px solid #ffd600;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: monospace;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>rshop Theme Development Server</h1>
+    
+    <div class="note">
+      <p><strong>Внимание:</strong> Это страница сервера разработки Vite. Для работы над WordPress темой необходимо:</p>
+      <ol>
+        <li>Открыть <a href="http://rshop.local" target="_blank">http://rshop.local</a> - ваш сайт на WordPress.</li>
+        <li>Добавить интеграцию с Vite в файл functions.php.</li>
+        <li>Поддерживать сервер Vite работающим для горячей замены модулей (HMR).</li>
+      </ol>
+    </div>
+    
+    <h2>Как это работает</h2>
+    <p>Когда сервер Vite запущен:</p>
+    <ul>
+      <li>Изменения в SCSS автоматически обновляют стили без перезагрузки.</li>
+      <li>Изменения в JS файлах также применяются мгновенно.</li>
+      <li>Результат сборки сохраняется в папке <code>dist/</code> следующим образом:
+        <ul>
+          <li><code>dist/build.css</code> - скомпилированные стили</li>
+          <li><code>dist/build.js</code> - скомпилированный JavaScript</li>
+        </ul>
+      </li>
+    </ul>
+    
+    <h2>Интеграция с WordPress</h2>
+    <p>Файл <code>vite-integration.php</code> содержит все необходимые функции для интеграции с WordPress.</p>
+    <p>Более подробная информация представлена в файле <code>README.md</code>.</p>
+    
+    <!-- Эти скрипты необходимы для работы Vite -->
+    <div id="app"></div>
+    <script type="module" src="/src/index.js"></script>
+  </body>
+</html> 

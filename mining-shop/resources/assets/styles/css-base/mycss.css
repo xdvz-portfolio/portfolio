@@ -1,0 +1,122 @@
+.product-img{
+	width: 50%;
+}
+.sl1_item{
+display: flex !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.slick-prev {
+    left: -40px;
+}
+.slick-next {
+    right: -55px;
+}
+.slick-dots {
+    bottom: -30px;
+    width: 100%;
+}
+.slick-dots li.slick-active button:before {
+    background: #00b5e1;
+}
+.slick-dots li button:before {
+    border: 1px solid #00b5e1;
+}
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+    background: #00b5e1;
+}
+.slick-prev:hover:before, .slick-next:hover:before {
+    color: #00b5e1;
+}
+.product-img {
+    padding-bottom: 100px;
+}
+.main_cat_btn{
+    margin: 20px auto;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_cat_btn a{
+width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #07709b;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.main_cat_btn a:hover{
+background: #00b5e1;
+}
+.example-item {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.example_item_play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    background: url(/wp-content/themes/mining-store-demo/assets/images/play1.svg);
+    background-size: cover;
+}
+/* .video-item a:before {
+    content: '';
+    width: 75px;
+    background: url(/wp-content/themes/mining-store-demo/assets/images/play1.svg);
+    height: 75px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+} */
+/* .example_item_play img{
+max-width: 30px;
+} */
+.examples-slider .owl-next {
+    right: 30px;
+    margin-top: -65px;
+}
+.examples-slider .owl-prev {
+    left: -25px;
+    margin-top: -75px;
+}
+@media screen and (max-width: 767px){
+.product-img {
+    padding-bottom: 80px;
+    width: 90%;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 50px;
+}
+.slick-prev {
+    left: 0px;
+    display: none !important;
+}
+.slick-next {
+    right: 0px;
+    display: none !important;
+}
+.slick-dots li button:hover:before {
+    background: none;
+}
+.slick-active button:focus:before {
+    background: #00b5e1 !important;
+}
+}

@@ -1,0 +1,295 @@
+/**
+ * Patent elements
+ */
+
+// Patent position
+.patent {
+  position: absolute;
+  z-index: 1;
+  left: 130px;
+  top: 42%;
+  
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Patent information
+.patent-info {
+  margin-left: 24px;
+  
+  span {
+    display: block;
+    
+    &:nth-child(1) {
+      color: #3F4C61;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    
+    &:nth-child(2) {
+      color: #00B5E1;
+      font-weight: 400;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+  }
+}
+
+// Mobile patent display
+.patent-mobile {
+  display: none;
+}
+
+// Steps information (for steps with info bubbles)
+.steps__info_1 {
+  margin-left: 184px;
+  margin-top: -220px;
+  
+  .steps__info_box {
+    left: -409px;
+    position: relative;
+    top: 165px;
+  }
+}
+
+.steps__info_2 {
+  margin-left: -184px;
+  margin-top: 115px;
+  margin-left: -200px;
+  
+  .steps__info_box {
+    position: relative;
+    left: 421px;
+    bottom: 210px;
+  }
+}
+
+.steps__info_3 {
+  margin-left: 250px;
+  margin-top: 65px;
+}
+
+.steps__info_4 {
+  margin-left: -330px;
+  margin-top: -240px;
+  
+  .steps__info_box {
+    position: relative;
+    left: 0px;
+    bottom: -235px;
+  }
+  
+  .steps__info_btn.active {
+    background: url(../images/Group_plus2.svg) no-repeat !important;
+    transform: none !important;
+    
+    img {
+      display: none;
+    }
+  }
+  
+  .steps__info_btn {
+    background: #f61c0d !important;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.steps__info_5 {
+  margin-left: 172px;
+  margin-top: 105px;
+  z-index: 1;
+  
+  .steps__info_box {
+    width: 550px;
+    position: relative;
+    left: -550px;
+  }
+}
+
+.steps__info_6 {
+  margin-left: 390px;
+  margin-top: -66px;
+}
+
+// Scrolldown element
+span.scrolldown {
+  color: #3F4B61;
+  margin-top: 40px;
+  
+  &:before {
+    background: url(../images/arrow-point-to-right.svg);
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+  }
+}
+
+// Promo background
+.promo-bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Media queries
+@media screen and (max-width: 1600px) {
+  .promo-bg {
+    img {
+      max-width: 1600px;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .promo-bg {
+    img {
+      max-width: 1200px;
+      height: auto;
+    }
+  }
+  
+  .patent {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .promo-bg {
+    img {
+      max-width: 1000px;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .promo-bg {
+    img {
+      max-width: 800px;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .promo-bg {
+    img {
+      max-width: 700px;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .steps__info_1 {
+    margin-top: -200px;
+  }
+  
+  .steps__info.steps__info_2 {
+    .steps__info_box {
+      bottom: 196px;
+    }
+  }
+  
+  .steps__info_3 {
+    margin-top: -10px;
+  }
+  
+  .steps__info_4 {
+    margin-left: -310px;
+    margin-top: -190px;
+  }
+  
+  .steps__info.steps__info_4 {
+    .steps__info_box {
+      position: relative;
+      left: 0px;
+      bottom: -240px;
+    }
+  }
+  
+  .steps__info.steps__info_5 {
+    .steps__info_box {
+      top: 0px;
+    }
+  }
+  
+  .steps__info_5 {
+    margin-left: 206px;
+  }
+  
+  .steps__info_6 {
+    margin-top: -82px;
+  }
+}
+
+@media screen and (max-width: 1199px), (max-height: 700px) {
+  .patent-mobile {
+    display: inline-flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+  }
+  
+  .patent-img {
+    display: inline-block;
+    position: relative;
+    width: 85px;
+    height: 90px;
+  }
+  
+  .patent-info-mobile {
+    display: inline-block;
+    position: relative;
+    
+    span {
+      display: block;
+      color: #00B5E1;
+      font-weight: 400;
+      margin-top: 5px;
+      margin-left: 5px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .steps__top {
+    margin-top: 0px !important;
+  }
+  
+  .scroll_down {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: none;
+    z-index: 22;
+    margin-left: 50%;
+    margin-top: -6%;
+  }
+}
+
+@media screen and (max-height: 850px) {
+  .steps__top {
+    margin-top: 90px;
+    max-width: 100%;
+    margin-left: auto;
+    width: 100%;
+    display: block;
+    margin-right: auto;
+  }
+  
+  .steps__info_box {
+    padding: 15px 15px 15px 20px;
+  }
+  
+  .steps__info_box-subtitle {
+    font-size: 13px;
+  }
+} 

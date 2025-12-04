@@ -1,0 +1,241 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "sass:color";
+
+/*
+*****************************************
+! HERO SLIDER ! ----------------------*
+*****************************************
+*/
+
+/* Основной контейнер слайдера */
+.hero-slider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-slider__wrapper {
+  height: 450px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Слайды и их содержимое */
+.hero-slider__slide {
+  position: relative;
+  overflow: hidden; /* Предотвращаем выход контента за пределы слайда */
+}
+
+.hero-slider__image-container {
+  position: relative;
+}
+
+/* Настраиваемое затемнение */
+.hero-slider__overlay {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background устанавливается через инлайн-стиль */
+  z-index: 1;
+}
+
+/* Удаляем старый псевдоэлемент для затемнения, т.к. теперь используем div */
+.hero-slider__image-container::before {
+  content: none;
+}
+
+.hero-slider__image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+/* Стили для картинки (picture) элемента */
+.hero-slider__image-container picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Обновленные стили для контейнера содержимого */
+.hero-slider__content-container {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* Предотвращаем влияние на другие элементы страницы */
+  pointer-events: none;
+}
+
+/* Стили для заголовка - позиционирование задается через inline-стили */
+.hero-slider__title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  padding: 0 20px;
+  /* Включаем pointer-events для взаимодействия */
+  pointer-events: auto;
+  /* Предотвращаем переполнение длинными словами */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Контейнер для кнопки */
+.hero-slider__button-container {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  /* Включаем pointer-events для взаимодействия */
+  pointer-events: auto;
+}
+
+/* Стили для кнопки */
+.hero-slider__button {
+  display: inline-block;
+  width: auto;
+  font-family: $font-primary;
+  font-weight: 500;
+  color: $white;
+  background-color: $gold;
+  border-color: $gold;
+  border-radius: 1px;
+  padding: $spacing-sm $spacing-lg;
+  cursor: pointer;
+  transition: background-color 0.3s ease, outline 0.2s ease;
+}
+
+.hero-slider__button:hover {
+  background-color: color.adjust($gold, $lightness: -10%);
+}
+
+/* Добавляем стиль фокуса для доступности */
+.hero-slider__button:focus {
+  outline: 2px solid $gold;
+  outline-offset: 2px;
+}
+
+/* Стили для кнопок навигации Swiper - их нет в макете */
+.hero-slider .swiper-button-next.hero-slider__button-next,
+.hero-slider .swiper-button-prev.hero-slider__button-prev {
+  display: none;
+}
+
+/* Стили для пагинации Swiper */
+.hero-slider .swiper-pagination.hero-slider__pagination {
+  position: relative;
+  bottom: auto;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.hero-slider .swiper-pagination.hero-slider__pagination .swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.hero-slider .swiper-pagination.hero-slider__pagination .swiper-pagination-bullet-active {
+  background: $gold;
+  opacity: 1;
+}
+
+.hero-slider .swiper-pagination.hero-slider__pagination .swiper-pagination-bullet:hover {
+  background: $gold;
+  opacity: 0.8;
+}
+
+/* Добавляем стили для фокуса пагинации */
+.hero-slider .swiper-pagination.hero-slider__pagination .swiper-pagination-bullet:focus {
+  outline: 2px solid $gold;
+  outline-offset: 2px;
+  background: $gold;
+  opacity: 0.9;
+}
+
+/* Медиа-запросы для планшетов */
+@media screen and (max-width: 1199px) {
+  .hero-slider__wrapper,
+  .hero-slider__image,
+  .hero-slider__overlay {
+    height: 350px;
+  }
+  
+  .hero-slider__title {
+    font-size: 36px;
+    padding: 0 $spacing-md;
+  }
+  
+  .hero-slider__button-container {
+    padding: 0 $spacing-md;
+  }
+  
+  .hero-slider .swiper-pagination.hero-slider__pagination {
+    margin-top: 7px;
+  }
+}
+
+/* Медиа-запросы для мобильных устройств */
+@include mobile {
+  .hero-slider__wrapper,
+  .hero-slider__image,
+  .hero-slider__overlay {
+    height: 30vh;
+    min-height: 100px;
+  }
+
+  .hero-slider__image {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-slider__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0 $spacing-sm;
+  }
+  
+  .hero-slider__button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+  
+  .hero-slider__button-container {
+    padding: 0 $spacing-sm;
+  }
+  
+  .hero-slider .swiper-pagination.hero-slider__pagination {
+    margin-top: 5px;
+  }
+}
+
+/* Дополнительные стили для WooCommerce */
+.woocommerce-loop-product__title {
+  min-height: 40px;
+}
+
+/* WOOCOMERCE PRODUCT LOOP SLIDER STYLES */
+/* Эти стили можно будет обновить позже, если потребуется миграция других слайдеров на Swiper */
+.wcpscwc-product-slider button.slick-prev {
+  left: -24px;
+}
+
+.wcpscwc-product-slider button.slick-next {
+  right: -24px;
+}
+
+.wcpscwc-product-slider button.slick-arrow {
+  border-radius: 1px !important;
+}

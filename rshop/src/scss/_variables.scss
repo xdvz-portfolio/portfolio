@@ -1,0 +1,33 @@
+// Цвета
+$black: #010101;
+$white: #ffffff;
+$light-gray: #c4c4c4;
+$gray: #717171;
+$dark-gray: #3c3c3c;
+$gold: #DCA966;
+
+// Шрифты
+$font-primary: "Oswald", sans-serif;
+$font-secondary: "Open Sans", sans-serif;
+
+// Размеры шрифтов
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-md: 18px;
+
+// Размеры контейнеров
+$container-max-width: 1170px;
+$container-min-width: 290px;
+
+// Отступы
+$spacing-xs: 5px;
+$spacing-sm: 10px;
+$spacing-md: 15px;
+$spacing-lg: 30px;
+$spacing-xl: 50px;
+
+// Переходы
+$transition-base: all .2s ease-in-out;
+
+// Z-индексы
+$z-index-header: 10; 

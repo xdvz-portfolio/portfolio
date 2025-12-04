@@ -1,0 +1,195 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/**
+ * General resets
+ */
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: $font-secondary; 
+}
+
+h1 {
+  font-family: $font-primary;
+  font-weight: 600; 
+}
+
+h1 a {
+  font-weight: 600; 
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  font-weight: 500;
+}
+
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-family: $font-primary;
+  font-weight: 500;
+}
+
+body {
+  background-color: $white; 
+}
+
+.added_to_cart,
+.button,
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  box-shadow: none;
+  border-radius: 3px; 
+}
+
+.added_to_cart.alt,
+.button.alt,
+button.alt,
+input[type=button].alt,
+input[type=reset].alt,
+input[type=submit].alt {
+  box-shadow: none; 
+}
+
+.primary-navigation {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+.secondary-navigation {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: $font-size-sm;
+  line-height: 21px;
+}
+
+a:focus,
+.focus a {
+  outline: none !important;
+}
+
+ul, ol {
+  margin: initial;
+  padding: 0;
+}
+
+a {
+  color: initial;
+}
+
+.home.blog .site-header, 
+.home.page:not(.page-template-template-homepage) .site-header, 
+.home.post-type-archive-product .site-header {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .storefront-secondary-navigation.woocommerce-active .site-header .secondary-navigation {
+    width: 100%;
+    float: none;
+    margin: auto;
+  }
+  
+  .secondary-navigation .menu {
+    width: auto;
+    float: none;
+  }
+
+  .secondary-navigation ul.menu a {
+    color: $white;
+  }
+  
+  .woocommerce-active .site-header .site-header-cart {
+    width: initial;
+    float: none;
+    margin: initial;
+  }
+  
+  .site-header-cart .cart-contents {
+    @include flex(row, flex-end);
+    margin-right: 18px;
+    padding: initial;
+    position: relative;
+    background-color: transparent;
+    height: auto;
+    width: 250px;
+    text-indent: 0;
+    color: $white;
+  }
+  
+  .site-header {
+    padding: initial;
+  }
+  
+  .storefront-secondary-navigation.woocommerce-active .site-header .site-branding {
+    width: initial;
+    float: initial;
+    margin: initial;
+  }
+  
+  .woocommerce-active .site-header .main-navigation {
+    width: initial;
+    float: initial;
+    margin: initial;
+    clear: initial;
+  }
+  
+  .woocommerce-active .site-header .site-search {
+    width: 387px;
+    float: initial;
+    margin: initial;
+    clear: initial;
+  }
+  
+  .secondary-navigation {
+    margin: initial;
+  }
+  
+  .site-header .site-branding img {
+    height: initial;
+    max-width: initial;
+    max-height: initial;
+  }
+  
+  .main-navigation ul.menu, .main-navigation ul.nav-menu {
+    margin-left: initial;
+  }
+
+  .storefront-breadcrumb {
+    margin: initial;
+  }
+  
+  .storefront-full-width-content .woocommerce-tabs .panel {
+    margin-bottom: initial;
+  }
+  
+  .woocommerce-active .site-branding {
+    float: initial;
+  }
+}
+
+table.cart .qty {
+  width: initial;
+  max-width: initial;
+}
+
+.dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
+  font-size: 12px;
+  margin: $spacing-xs;
+}
+
+.site-footer a {
+  text-decoration: initial;
+}

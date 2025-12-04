@@ -1,0 +1,122 @@
+// ==========================================================================
+// HEADER
+// ==========================================================================
+
+.header {
+  min-height: $header-height;
+  margin-left: 182px;
+  margin-right: 149px;
+  
+  @include mobile-only {
+    margin: 0;
+    min-height: auto;
+  }
+  
+  &-wrapper {
+    @include flex-between;
+    width: 100%;
+    padding-top: $spacing-xl;
+    
+    @include mobile-only {
+      padding: $spacing-sm;
+      flex-direction: column;
+      gap: $spacing-sm;
+    }
+  }
+  
+  &-left-part,
+  &-right-part {
+    @include flex-center;
+    
+    @include mobile-only {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  &-right-part {
+    justify-content: flex-end;
+    
+    @include mobile-only {
+      justify-content: center;
+    }
+  }
+  
+  &-logo {
+    margin-top: -15px;
+    
+    @include mobile-only {
+      margin-top: 0;
+    }
+    
+    &-img {
+      max-width: 100%;
+    }
+  }
+  
+  &-tel {
+    margin-right: $spacing-xl;
+    margin-top: $spacing-sm;
+    @include text-style($font-size-md, $font-weight-bold);
+    color: $color-text-secondary;
+    
+    &:hover {
+      color: $color-primary;
+    }
+    
+    @include mobile-only {
+      margin: 0;
+    }
+  }
+  
+  &-cta-button {
+    &-wrapper {
+      @include flex-column-center;
+      gap: $spacing-xs;
+    }
+    
+    &-hours {
+      font-size: $font-size-base;
+      color: $color-primary;
+    }
+  }
+}
+
+// Navigation
+.nav-primary {
+  display: flex;
+  margin-left: 215px;
+  margin-top: $spacing-sm;
+  
+  @include mobile-only {
+    display: none;
+  }
+  
+  ul {
+    @include flex-center;
+    gap: $spacing-xxxl;
+    margin: 0;
+    padding: 0;
+    
+    li {
+      @include text-style($font-size-md, $font-weight-bold);
+      
+      a {
+        color: $color-text-secondary;
+        
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+// Mobile header
+.mobile-header {
+  display: none;
+  
+  @include mobile-only {
+    display: block;
+  }
+} 

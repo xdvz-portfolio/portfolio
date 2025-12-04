@@ -1,0 +1,124 @@
+# WordPress тема rshop - .gitignore
+
+# Временные и сгенерированные файлы
+/Components/PremiumComponents/
+npm-debug.log
+yarn-error.log
+*.log
+*.tmp
+*.temp
+*.cache
+
+# Зависимости и библиотеки
+/node_modules/
+/vendor/
+/bower_components/
+/jspm_packages/
+composer.phar
+
+# Локальные конфигурации и среды
+.env
+.env.*
+!.env.example
+.htaccess
+wp-config.php
+
+# Скомпилированные ресурсы и кэши
+# Комментарий: Временно включаем /dist в репозиторий
+/dist/
+.cache/
+.sass-cache/
+docs/styles/**/*.css.map
+# build/
+# НЕ игнорировать build директорию в checkout-wc
+!checkout-wc/default/build/
+
+# Vite специфичные файлы
+.vite/
+
+# Файлы IDE и редакторов
+## PhpStorm
+.idea/
+*.iml
+*.iws
+*.windsurfrules
+*.cursorrules
+
+
+## VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+## Sublime Text
+*.sublime-workspace
+*.sublime-project
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+sftp-config.json
+Package Control.*
+oscrypto-ca-bundle.crt
+bh_unicode_properties.cache
+GitHub.sublime-settings
+
+# Операционные системы
+## macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+## Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+## Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+.cursor/*
+# Безопасность и приватные данные
+/assets/mnlHHtfdd53aassrrt/
+
+# WordPress специфичные файлы
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/mu-plugins/
+wp-content/wp-cache-config.php
+
+# Конфиденциальная информация для деплоя
+.deploy/secrets/

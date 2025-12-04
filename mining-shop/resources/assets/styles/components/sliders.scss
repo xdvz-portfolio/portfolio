@@ -1,0 +1,247 @@
+/**
+ * Slider styles
+ */
+
+// Basic slider styles
+.owl-carousel {
+  .owl-item {
+    img {
+      height: auto;
+    }
+  }
+}
+
+// Slide indication
+.slide-indication {
+  position: absolute;
+  z-index: 2;
+  right: 80px;
+  top: 40%;
+  
+  span {
+    display: block;
+    line-height: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    position: relative;
+    padding-left: 30px;
+    color: #c4c4c4;
+    
+    &:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #C4C4C4;
+      display: block;
+      left: 5px;
+      border-radius: 50%;
+      position: absolute;
+      top: 5px;
+    }
+  }
+  
+  span.active-slide {
+    color: #3F4B61;
+    
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: #00B5E1;
+      display: block;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+      position: absolute;
+    }
+  }
+}
+
+// Slick slider styles
+.slick-prev {
+  left: -40px;
+}
+
+.slick-next {
+  right: -55px;
+}
+
+.slick-dots {
+  bottom: -30px;
+  width: 100%;
+}
+
+.slick-dots li.slick-active button:before {
+  background: #00b5e1;
+}
+
+.slick-dots li button:before {
+  border: 1px solid #00b5e1;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  content: '';
+  text-align: center;
+  opacity: .25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  background: #00b5e1;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: #00b5e1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "arial", sans-serif;
+  font-size: 60px;
+  line-height: 1;
+  color: #3F4B61;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev:before {
+  content: "‹";
+}
+
+[dir="rtl"] .slick-prev:before {
+  content: "›";
+}
+
+[dir="rtl"] .slick-next {
+  left: -10px;
+  top: 70px;
+  right: auto;
+}
+
+.slick-next:before {
+  content: "›";
+}
+
+[dir="rtl"] .slick-next:before {
+  content: "‹";
+}
+
+@media screen and (max-width: 767px){
+  .slick-prev:before, .slick-next:before {
+    font-size: 50px;
+  }
+  
+  .slick-prev {
+    left: 0px;
+    display: none !important;
+  }
+  
+  .slick-next {
+    right: 0px;
+    display: none !important;
+  }
+  
+  .slick-dots li button:hover:before {
+    background: none;
+  }
+  
+  .slick-active button:focus:before {
+    background: #00b5e1 !important;
+  }
+}
+
+// Examples slider specific styles
+.examples-slider {
+  margin-top: 10px;
+  
+  .owl-next {
+    top: 42%;
+  }
+  
+  .owl-next {
+    right: 30px;
+    margin-top: -65px;
+  }
+  
+  .owl-prev {
+    left: -25px;
+    margin-top: -75px;
+  }
+}
+
+// Video review slider specific styles
+.video-review_slider {
+  display: flex;
+  margin-bottom: 90px;
+}
+
+@media screen and (min-width: 1601px) {
+  .video-review_slider {
+    .owl-item {
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+    }
+    
+    .owl-item.active {
+      opacity: 1;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+  .video-review_slider {
+    .owl-item {
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+    }
+    
+    .owl-item.active {
+      opacity: 1;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+  .video-review_slider {
+    .owl-item {
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+    }
+    
+    .owl-item.active {
+      opacity: 1;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+} 

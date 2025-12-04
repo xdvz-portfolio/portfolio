@@ -1,0 +1,160 @@
+{% extends "layout/default.html" %}
+{% set title = "Ссылка на музыку - мб - сервис доставки лицензионной музыки и инструментарий для аудиомаркетинга" %}
+
+{% block content %}
+<div class="section message">
+    <div class="container_center anim_cont">
+
+        <h1 class="message__title sectionTitle wow fadeInUp">Ссылка на музыку</h1>
+
+        <div class="messageList wow fadeInUp" id="list">
+            <div class="messageContainer">
+                <div class="messageList__left">
+                    <div class="messageList__title">Пожалуйста, укажите ссылки в сообщении.</div>
+                    <form class="messageList__form" id="messageList__form">
+                        <div class="messageList__row">
+                            <div class="messageList__item">
+                                <label for="first_name">Имя</label>
+                                <input id="first_name" name="first_name" type="text" placeholder="Иван">
+                            </div>
+                            <div class="messageList__item">
+                                <label for="last_name">Фамилия</label>
+                                <input id="last_name" name="last_name" type="text" placeholder="Иванов">
+                            </div>
+                        </div>
+                        <div class="messageList__row">
+                            <label for="email">Электронная почта</label>
+                            <input id="email" name="email" type="email" value="" placeholder="kafeshka@mail.com">
+                        </div>
+                        <div class="messageList__row">
+                            <label for="phone">Номер телефона</label>
+                            <input id="phone" name="phone" type="tel" value="" placeholder="7 999 999 99 99">
+                        </div>
+                        <div class="messageList__row">
+                            <label for="company">Название компании</label>
+                            <input id="company" name="company" type="text" placeholder="ООО Кафешка">
+                        </div>
+                        <div class="messageList__row">
+                            <label for="region">Регион</label>
+                            <select id="region" name="region" data-live-search="true" multiple></select>
+                        </div>
+                        <div class="messageList__row">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" placeholder="Музыкальный привет"></textarea>
+                        </div>
+                        <div class="messageList__row">
+                            <input id="rules" name="rules" type="checkbox" value="1" checked>
+                            <label class="label__check" for="rules">Принимаю <a href="agreement.html"><span>Правила сервиса</span></a></label>
+                        </div>
+                        <div class="messageList__row">
+                            <a href="#list" class="btn send__btn" id="submitForm" data-scroll-to>Отправить</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="messageList__right">
+                    <div class="messageList__title">мб включит правильную музыку в нужное время в нужном месте.</div>
+                    <div class="messageList__img"><img src="img/message__img.png" alt=""></div>
+                    <div class="messageList__logo">
+                        mb
+                    </div>
+                </div>
+            </div>
+
+            {% include "partials/sent_notification.html" %}
+        </div>
+
+    </div>
+</div>
+
+{% include "partials/mbc.html" %}
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript">
+    $(document)['ready'](function () {
+        var animation = LoadAnim('SentSuccess', 'json/letter-fly.json', 0.3);
+
+        var formSubmit = $('#submitForm');
+        var form = $("#messageList__form");
+        formSubmit.on('click', function (event) {
+            event.preventDefault();
+            if(!form.valid()) return;
+
+            var jsonData = getFormData($(form));
+            jsonData['ticket-type'] = 3;
+            jsonData['header'] = 'Музыка с сайта';
+            $.ajax({
+                url: 'request.php',
+                method: 'POST',
+                data: JSON.stringify(jsonData),
+                dataType: "json",
+                contentType: "application/json;charset=utf-8",
+                success: function(data, status, xhr) {
+                    console.log(data);
+                    form.trigger('reset');
+                    animation.play();
+                },
+                error: function(err, textStatus, errorThrown) {
+                    console.log(err);
+                }
+            });
+        });
+
+        var phoneMask = IMask($('#phone').get(0), {
+            mask: '0 (000) 000-0000',
+            lazy: false,
+            placeholderChar: '_'
+        });
+
+        var region = $('#region').select2({
+            width: '100%',
+            placeholder: 'Выберите регион',
+            allowClear: true
+        });
+
+        region.select2({
+            data: RUSSIA_CITIES,
+            maximumSelectionLength: 9
+        });
+
+        form.validate({
+            errorPlacement: function(error, element) {
+                //just nothing, empty
+            },
+            rules: {
+                first_name: {
+                    "required": !![],
+                    "minlength": 3
+                },
+                last_name: {
+                    "required": !![],
+                    "minlength": 3
+                },
+                company: {
+                    "required": !![],
+                    "minlength": 3
+                },
+                region: "required",
+                rules: "required",
+                email: {
+                    "required": !![],
+                    "email": !![]
+                },
+                phone: {
+                    "required": !![],
+                    validPhoneMask: [phoneMask]
+                }
+            },
+            messages: {
+                "first_name": "",
+                "last_name": "",
+                "company": "",
+                "region": "",
+                "rules": "",
+                "email": "",
+                "phone": ""
+            }
+        });
+    });
+</script>
+{% endblock %}

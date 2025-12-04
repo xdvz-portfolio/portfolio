@@ -1,0 +1,244 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/*High top panel*/
+
+.high-top-panel {
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-bottom: 1px solid $light-gray;
+  background-color: $black;
+  left: 0;
+  top: 0;
+  z-index: $z-index-header;
+}
+
+.high-top-item {
+  @include flex(row, space-between, center);
+}
+
+.high-top-panel-warp {
+  @include flex(row, space-between, center);
+}
+
+/* Primary navigation (Header) */
+
+.container-header {
+  @include container;
+  display: flex;
+  min-width: 180px;
+}
+
+#masthead > div.primary-panel > div > div > div.primary-panel-item > div > a > img {
+  width: 170px;
+  padding: $spacing-xs;
+  margin-right: $spacing-xs;
+}
+
+#masthead > div.primary-panel > div > div > div.header_contact_widget > div {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  position: relative;
+}
+
+.primary-panel-warp {
+  @include flex(row, space-between, center, nowrap);
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.primary-panel-item {
+  @include flex;
+  gap: 34px;
+}
+
+.main-navigation {
+  align-items: center;
+  margin-left: 29px;
+}
+
+.menu-contacts {
+  @include flex(column);
+}
+
+.menu-contacts-wrap {
+  @include flex(column, flex-start, flex-end);
+  padding-left: $spacing-sm;
+  padding-right: $spacing-sm;
+}
+
+.menu-contacts-tel__row {
+  @include flex(row);
+  margin-bottom: 11px;
+}
+
+.menu-contacts-tel {
+  display: flex;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: $font-size-md;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.menu-contacts-tel-whatsapp {
+  display: flex;
+  margin-right: 8px;
+}
+
+.menu-contacts-time {
+  @include flex(column, flex-start, flex-end);
+}
+
+.menu-contacts-time p {
+  font-family: $font-primary;
+  margin: $spacing-xs 0 0 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: $font-size-sm;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $black;
+  opacity: 0.5;
+}
+
+.header-contacts-widget {
+  display: flow-root;
+  font-family: $font-primary;
+  font-size: $font-size-sm;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.mobile-menu-contacts {
+  font-family: $font-primary;
+  padding: $spacing-sm;
+}
+
+.mobile-menu-contacts-wrap {
+  padding-left: $spacing-sm;
+  padding-right: $spacing-sm;
+}
+
+#mega-menu-item-324437 > a.mobile-menu-contacts-tel {
+  display: flex;
+  color: $white;
+}
+
+.mobile-menu-contacts-tel-whatsapp {
+  display: inline-flex;
+}
+
+.mobile-menu-contacts-time {
+  display: initial;
+  font-family: $font-primary;
+  color: $white;
+  white-space: pre;
+}
+
+@include tablet {
+  .header-contacts-widget {
+    display: none;
+  }
+
+  .primary-panel-item {
+    @include flex(column-reverse);
+    width: 100vw;
+    gap: 0;
+  }
+
+  .main-navigation {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  .primary-panel-warp {
+    margin: 0;
+  }
+
+  .site-header {
+    padding: 0;
+  }
+
+  .storefront-breadcrumb {
+    padding: 0;
+  }
+
+  .menu-contacts {
+    display: none;
+  }
+
+  .custom-logo {
+    display: none;
+  }
+
+  .woocommerce-active .site-branding {
+    float: initial;
+    @include center;
+  }
+
+  .site-branding {
+    display: none;
+    width: 100vw;
+  }
+
+  .header_contact_widget {
+    display: none;
+  }
+
+  .woocommerce-active .site-header .main-navigation {
+    padding-top: 0;
+  }
+}
+
+/*fix*/
+
+@media (min-width: 900px) {
+  .woocommerce-active .site-header .main-navigation {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+@include tablet {
+  .storefront-handheld-footer-bar {
+    display: block;
+  }
+}
+
+a.cart-contents:hover, 
+.site-header-cart .widget_shopping_cart a:hover, 
+.site-header-cart:hover > li > a {
+  color: $gold;
+}
+
+@include tablet {
+  .high-top-panel,
+  .high-top-item,
+  .high-top-panel-warp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-left {
+    gap: 20px;
+  }
+  
+  .mega-logo-block {
+    display: none !important;
+  }
+}
+
+.menu-dopolnitelnoe-menyu-container {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-logo {
+  width: 168px !important;
+  height: 168px !important;
+}

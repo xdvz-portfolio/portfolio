@@ -1,0 +1,711 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+#slider-header {
+    min-height: 4000px;
+    position: relative;
+    -webkit-transform: translateY(80px);
+    -ms-transform: translateY(80px);
+    transform: translateY(80px)
+}
+
+._cls1_54b58 { /*!*/
+}
+
+._cls2_54b58 {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    z-index: 1;
+    list-style: none
+}
+
+._cls1_88fb6 { /*!*/
+}
+
+._cls2_88fb6 {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    line-height: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    padding-left: 30px;
+    -webkit-transition: all;
+    -o-transition: all;
+    transition: all;
+    -webkit-transition-duration: .25ms;
+    -o-transition-duration: .25ms;
+    transition-duration: .25ms
+}
+
+._cls2_88fb6._is-unactive_88fb6 {
+    color: #c4c4c4
+}
+
+._cls2_88fb6._is-unactive_88fb6:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #c4c4c4;
+    display: block;
+    left: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px
+}
+
+
+._cls2_88fb6._is-active_88fb6 {
+    color: #3f4b61
+}
+
+._cls2_88fb6._is-active_88fb6:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #00b5e1;
+    display: block;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    position: absolute
+}
+
+
+._cls1_3f42f { /*!*/
+}
+
+._cls2_3f42f {
+    cursor: pointer;
+    color: #3f4b61;
+    margin-top: 40px;
+    display: block;
+    line-height: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    position: relative;
+    padding-left: 30px
+}
+
+._cls2_3f42f:before {
+    position: absolute;
+    content: "";
+    background: url(https://mining-store-demogroup.com/wp-content/themes/mining-store-demo/assets/images/arrow-point-to-right.svg);
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0
+}
+
+
+._cls1_8a48f { /*!*/
+}
+
+._cls2_8a48f {
+    position: absolute;
+    z-index: 1;
+    left: 130px;
+    top: 42%
+}
+
+._cls1_26092 { /*!*/
+}
+
+._cls2_26092 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none
+}
+
+._cls1_72e9d { /*!*/
+}
+
+._cls2_72e9d {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 24px
+}
+
+._cls2_72e9d span:first-child {
+    color: #3f4c61;
+    font-weight: 600;
+    font-size: 18px
+}
+
+._cls2_72e9d span:last-child {
+    color: #00b5e1;
+    font-weight: 400;
+    margin-top: 5px;
+    font-size: 16px
+}
+
+._cls1_a719f { /*!*/
+}
+
+._cls2_a719f {
+    border: solid #333;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer
+}
+
+._cls2_a719f:hover {
+    opacity: .4
+}
+
+._cls2_a719f._direction-left_a719f {
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    margin-left: 1em
+}
+
+._cls2_a719f._direction-right_a719f {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-right: 1em
+}
+
+._cls1_57438 { /*!*/
+}
+
+._cls2_57438 {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #333;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px
+}
+
+._cls2_57438._active_57438 {
+    opacity: .5
+}
+
+._cls1_9b838 { /*!*/
+}
+
+._cls2_9b838 {
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+._cls1_a441a { /*!*/
+}
+
+._cls2_a441a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0
+}
+
+._cls1_de400 { /*!*/
+}
+
+._cls2_de400 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1
+}
+
+._cls1_b1cb9 { /*!*/
+}
+
+._cls2_b1cb9 {
+    width: 100%;
+    height: 100%
+}
+
+._cls1_705e4 { /*!*/
+}
+
+._cls2_705e4 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%
+}
+
+._cls1_5d322 { /*!*/
+}
+
+._cls2_5d322 {
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none
+}
+
+._cls1_3e3f4 { /*!*/
+}
+
+._cls2_3e3f4 {
+    background-color: #fff;
+    -webkit-box-shadow: 0 4px 54px rgba(0, 0, 0, .25);
+    box-shadow: 0 4px 54px rgba(0, 0, 0, .25);
+    width: 100%;
+    width: 410px;
+    padding: 15px;
+    -webkit-transition-duration: .25s;
+    -o-transition-duration: .25s;
+    transition-duration: .25s
+}
+
+._cls2_3e3f4._position-leftBottom_3e3f4 {
+    -webkit-transform: translate(-410px, -20px);
+    -ms-transform: translate(-410px, -20px);
+    transform: translate(-410px, -20px)
+}
+
+._cls2_3e3f4._position-rightTop_3e3f4 {
+    position: absolute;
+    bottom: 25px;
+    left: 25px
+}
+
+._cls2_3e3f4._state-open_3e3f4 {
+    opacity: 1
+}
+
+._cls2_3e3f4._state-close_3e3f4 {
+    opacity: 0;
+    z-index: -2
+}
+
+@-webkit-keyframes _fadeIn_3e3f4 {
+    0% {
+        opacity: 0;
+        display: block
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes _fadeIn_3e3f4 {
+    0% {
+        opacity: 0;
+        display: block
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes _fadeOut_3e3f4 {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0;
+        display: none
+    }
+}
+
+@keyframes _fadeOut_3e3f4 {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0;
+        display: none
+    }
+}
+
+._cls1_34cef { /*!*/
+}
+
+._cls2_34cef {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    background: -o-linear-gradient(216.66deg, #00b5e1 14.67%, #098dc4 88.33%);
+    background: linear-gradient(233.34deg, #00b5e1 14.67%, #098dc4 88.33%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    border: none;
+    outline: none;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+._cls2_34cef._close_34cef {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg)
+}
+
+._cls2_34cef._is-video_34cef {
+    background: #f61c0d
+}
+
+._cls1_5ce75 { /*!*/
+}
+
+._cls2_5ce75 {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: block
+}
+
+._cls1_c85ca { /*!*/
+}
+
+._cls2_c85ca {
+    line-height: 28px;
+    font-size: 13px;
+    color: #3f4c61
+}
+
+._cls1_0c9c0 { /*!*/
+}
+
+._cls2_0c9c0 {
+    padding-top: 10px;
+    height: 230px
+}
+
+._cls2_0c9c0 img {
+    max-width: 100%
+}
+
+._cplay_b9f7a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    background: url(https://mining-store-demogroup.com/wp-content/themes/mining-store-demo/assets/images/play1.svg);
+    background-size: cover
+}
+
+._citem_b9f7a {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+    pointer-events: auto
+}
+
+._citem_b9f7a a {
+    display: block;
+    text-decoration: none
+}
+
+._ctitle_b9f7a {
+    font-size: 13px;
+    color: #3f4c61;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-top: 10px;
+    font-weight: 600;
+    margin-bottom: 10px
+}
+
+._cduration_b9f7a {
+    color: #3f4c61;
+    font-size: 14px;
+    opacity: .5;
+    margin-right: 20px
+}
+
+._cls1_f706f { /*!*/
+}
+
+._cls2_f706f {
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    top: -70px;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    width: 53px;
+    height: 53px
+}
+
+._cls2_f706f:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(https://mining-store-demogroup.com/wp-content/themes/mining-store-demo/assets/images/icons/arrow.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%
+}
+
+._cls2_f706f._direction-left_f706f {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+._cls1_45740 { /*!*/
+}
+
+._cls2_45740 {
+    position: absolute;
+    width: 80%;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+    z-index: 999
+}
+
+._cls1_04f50 { /*!*/
+}
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+    /*
+      ONLY SAFARI
+     */
+    ._cls2_04f50 {
+        position: absolute;
+        top: -160px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%
+    }
+}}
+
+@supports (overflow:-webkit-marquee) and (justify-content:inherit)
+{
+    /*
+      ONLY SAFARI
+     */
+    ._cls2_04f50 {
+        position: absolute;
+        top: -160px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0) {
+/*    !**/
+/*      ONLY SAFARI*/
+/*     *!*/
+    ._cls2_04f50 {
+        position: absolute;
+        top: -160px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%
+    }
+}
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+
+    /*ONLY CHROME*/
+
+    ._cls2_04f50 {
+        position: absolute;
+        top: -160px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%
+    }
+}
+
+
+._cls1_bbb48 { /*!*/
+}
+
+._cls2_bbb48 {
+    display: block;
+    text-align: center;
+    font-size: 44px;
+    line-height: 50px;
+    color: #3f4c61;
+    position: relative;
+    z-index: 2;
+    font-weight: 500
+}
+
+._cls1_2853c { /*!*/
+}
+
+._cls2_2853c {
+    display: block;
+    text-align: center;
+    line-height: 28px;
+    font-size: 16px;
+    color: #3f4c61;
+    width: 100%;
+    max-width: 580px;
+    position: relative;
+    z-index: 2;
+    margin: 20px auto 0
+}
+
+._cls1_2ef38 { /*!*/
+}
+
+._cls2_2ef38 {
+    color: #00b5e1;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline
+}
+
+._cls1_7589f { /*!*/
+}
+
+._cls2_7589f {
+    background-color: #f61c0d;
+    color: #fff;
+    padding: 4px
+}
+
+._cls1_946cc { /*!*/
+}
+
+._cls2_946cc {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+._cls1_6a581 { /*!*/
+}
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+    /*
+      ONLY SAFARI
+     */
+    ._cls2_6a581 {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 100px;
+        height: calc(100vh - 90px)
+    }
+}}
+
+@supports (overflow:-webkit-marquee) and (justify-content:inherit)
+{
+    /*
+      ONLY SAFARI
+     */
+    ._cls2_6a581 {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 100px;
+        height: calc(100vh - 90px)
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0) {
+    /*
+      ONLY SAFARI
+     */
+    ._cls2_6a581 {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 100px;
+        height: calc(100vh - 90px)
+    }
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+
+    /*ONLY CHROME*/
+
+    ._cls2_6a581{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20px;
+        height: calc(100vh - 90px)
+    }
+}
+
+
+._cls2_6a581 video {
+    z-index: -1;
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    -webkit-transform: translateY(-16vh);
+    -ms-transform: translateY(-16vh);
+    transform: translateY(-16vh)
+}
+
+@media screen and (max-width: 1199px) {
+    #slider-header {
+        display:none;
+    }
+}

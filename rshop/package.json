@@ -1,0 +1,37 @@
+{
+  "name": "rshop-wordpress-child-theme",
+  "version": "2.1.10",
+  "volta": {
+    "node": "20.10.0",
+    "npm": "10.2.3"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "patch-version": "node scripts/update-versions.js patch",
+    "minor-version": "node scripts/update-versions.js minor",
+    "major-version": "node scripts/update-versions.js major",
+    "deploy-main": "npm run build && git add . && git commit -m \"Обновление версии\" && git push origin main",
+    "deploy-production": "git checkout production && git pull origin production && git merge main && git push origin production && git checkout main",
+    "deploy-all": "npm run deploy-main && npm run deploy-production",
+    "quick-deploy": "npm run patch-version && npm run deploy-all"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "sass": "^1.69.5",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "popper.js": "^1.16.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "readmore-js": "^2.2.1",
+    "slick-slider": "^1.8.2",
+    "swiper": "^11.2.6"
+  }
+}

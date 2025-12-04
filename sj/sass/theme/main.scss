@@ -1,0 +1,15 @@
+/* ===================================
+   DEMO THEME STYLES
+   ===================================
+   Main stylesheet for demo project
+=================================== */
+
+/* Layout Sections */
+@import "main-screen";
+@import "about";
+@import "statistics";
+@import "additional-about";
+@import "footer";
+
+/* Responsive Styles */
+@import "mobile";

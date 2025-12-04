@@ -1,0 +1,68 @@
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+
+.btn {
+  @include button-base;
+  
+  // Primary button
+  &--primary {
+    @include button-primary;
+  }
+  
+  // Outline button
+  &--outline {
+    @include button-outline;
+  }
+  
+  // Button sizes
+  &--small {
+    padding: $spacing-xs $spacing-md;
+    font-size: $font-size-sm;
+  }
+  
+  &--large {
+    padding: $spacing-md $spacing-xl;
+    font-size: $font-size-md;
+  }
+  
+  // Full width button
+  &--full {
+    width: 100%;
+  }
+  
+  // Button states
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    
+    &:hover {
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+}
+
+// Legacy button classes (for backward compatibility)
+.header-cta-button {
+  @extend .btn;
+  @extend .btn--outline;
+}
+
+.hero-cta {
+  @extend .btn;
+  @extend .btn--primary;
+  @extend .btn--full;
+  max-width: 780px;
+  margin-top: $spacing-xxxl;
+}
+
+.footer-cta-button {
+  @extend .btn;
+  @extend .btn--primary;
+  
+  @include mobile-only {
+    @extend .btn--full;
+    margin-top: $spacing-md;
+  }
+} 

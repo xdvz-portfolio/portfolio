@@ -1,0 +1,198 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// Контейнер фильтров
+.filter-block-all {
+  @include flex(column);
+}
+
+.filter-name {
+  font-family: $font-primary;
+}
+
+.filter-block:first-child {
+  padding-top: $spacing-lg - 10px;
+}
+
+// Стили FacetWP
+.facetwp-dropdown {
+  width: 100%;
+}
+
+.facetwp-facet {
+  margin-bottom: $spacing-lg - 10px !important;
+  max-height: 300px;
+  overflow-y: auto !important;
+  padding-right: $spacing-xs;
+}
+
+.facetwp-facet.facetwp-type-checkboxes .facetwp-checkbox,
+.facetwp-facet .facetwp-link {
+  display: block;
+  margin-bottom: $spacing-sm - 2px;
+}
+
+.facetwp-facet .facetwp-expand {
+  max-height: 300px;
+  overflow-y: visible !important;
+}
+
+// Пагинация FacetWP
+.facetwp-pager {
+  @include flex(row, flex-end);
+  padding-top: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.facetwp-page {
+  padding: $spacing-xs $spacing-sm !important;
+  margin-right: $spacing-sm !important;
+  justify-content: center;
+  align-content: center;
+  border-radius: 1px;
+  font-size: $font-size-sm;
+  display: inline-flex;
+  color: #333333;
+  background: #F8F4F0;
+  font-weight: 400;
+  
+  &.active {
+    background: $gold;
+    color: $white;
+    font-weight: normal;
+  }
+  
+  &:hover {
+    background: darken(#F8F4F0, 5%);
+    color: #333333;
+  }
+}
+
+// Заголовки и значения фильтров
+.filter__header {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: $font-size-base;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.facetwp-display-value {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size-sm;
+  line-height: 19px;
+  color: $black;
+}
+
+.facetwp-toggle {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size-sm;
+  line-height: 19px;
+  text-decoration-line: underline;
+  color: $gold;
+}
+
+// Аккордеон для фильтров
+// Стили для больших экранов
+@media only screen and (min-width: 425px) {
+  div.filter__header {
+    display: block;
+    width: 100%;
+    padding: 23px 0;
+    border-radius: 1px;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    
+    &:after {
+      content: url("/wp-content/themes/rshop/assets/icons/filter-open.svg");
+      float: right;
+    }
+    
+    &.active:after {
+      content: url("/wp-content/themes/rshop/assets/icons/filter-close.svg");
+    }
+    
+    &:hover,
+    &.active {
+      text-decoration: underline;
+    }
+  }
+  
+  .filter__body {
+    background-color: $white;
+    border-bottom: 1px solid #DEDEDE;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+// Мобильные стили для фильтров
+button.filter-block-accordion {
+  display: none;
+}
+
+@include mobile {
+  button.filter-block-accordion {
+    display: block;
+    font-family: $font-primary;
+    width: 100%;
+    background-color: $gold;
+    border-radius: 1px;
+    outline: none;
+    text-align: left;
+    padding: $spacing-sm;
+    color: $white;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    
+    &:after {
+      content: url("/wp-content/themes/rshop/assets/icons/filter.svg");
+      float: right;
+    }
+    
+    .storefront-sorting {
+      margin: $spacing-lg - 10px 0;
+    }
+    
+    &.active:after {
+      content: url("/wp-content/themes/rshop/assets/icons/filter-close.svg");
+    }
+    
+    &:hover,
+    &.active {
+      background-color: $gold;
+    }
+  }
+  
+  .filter-block-all {
+    padding: 0 $spacing-lg - 10px;
+    background-color: $white;
+    border-left: 1px solid #DEDEDE;
+    border-right: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    transition: all 0.2s ease-in-out;
+    display: none;
+  }
+  
+  .filter__content {
+    display: none;
+    padding: $spacing-sm 0;
+  }
+  
+  div.filter__header.active:after {
+    content: url("/wp-content/themes/rshop/assets/icons/filter-close.svg");
+  }
+}
+
+@include tablet {
+  .filter-block-all {
+    display: block;
+  }
+} 

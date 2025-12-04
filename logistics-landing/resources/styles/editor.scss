@@ -1,0 +1,49 @@
+// ==========================================================================
+// EDITOR STYLES
+// Styles for WordPress/CMS editor
+// ==========================================================================
+
+@import 'common/vars';
+@import 'common/mixins';
+@import 'common/fonts';
+@import 'common/typography';
+
+// Editor reset
+.editor-styles-wrapper {
+  @include font-base;
+  color: $color-text;
+  line-height: $line-height-relaxed;
+  
+  // Remove default margins that interfere with editor
+  * {
+    margin: 0 auto;
+  }
+  
+  // Ensure proper spacing in editor
+  p, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: $spacing-sm;
+  }
+  
+  // Button styles in editor
+  .btn,
+  .wp-block-button__link {
+    @include button-primary;
+  }
+}
+
+// WordPress specific blocks
+.wp-block {
+  &-quote {
+    border-left: 4px solid $color-primary;
+    padding-left: $spacing-md;
+    margin: $spacing-md 0;
+    font-style: italic;
+  }
+  
+  &-pullquote {
+    border-top: 2px solid $color-primary;
+    border-bottom: 2px solid $color-primary;
+    padding: $spacing-md 0;
+    text-align: center;
+  }
+}

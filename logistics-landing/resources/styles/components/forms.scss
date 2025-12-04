@@ -1,0 +1,105 @@
+// ==========================================================================
+// FORMS
+// ==========================================================================
+
+.form {
+  &-group {
+    margin-bottom: $spacing-md;
+  }
+  
+  &-label {
+    @include text-style($font-size-sm, $font-weight-medium);
+    margin-bottom: $spacing-xs;
+    display: block;
+  }
+  
+  &-control {
+    @include input-base;
+  }
+  
+  &-error {
+    @include text-style($font-size-sm, $font-weight-regular, $line-height-relaxed, #dc3545);
+    margin-top: $spacing-xs;
+  }
+  
+  &-help {
+    @include text-style($font-size-sm, $font-weight-regular, $line-height-relaxed, lighten($color-text, 30%));
+    margin-top: $spacing-xs;
+  }
+}
+
+// Select elements
+.select {
+  position: relative;
+  
+  select {
+    @include input-base;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg stroke='none'%3E%3Cpath d='M21.293,12.293,16,17.586l-5.293-5.293a1,1,0,0,0-1.414,1.414l6,6a1,1,0,0,0,1.414,0l6-6a1,1,0,0,0-1.414-1.414Z' fill='%23#{str-slice(#{$color-primary}, 2)}'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right $spacing-sm center;
+    background-size: 1rem;
+    padding-right: $spacing-xl;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    
+    &::-ms-expand {
+      display: none;
+    }
+    
+    @include mobile-only {
+      &::after {
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cg stroke='none'%3E%3Cpath d='M21.293,12.293,16,17.586l-5.293-5.293a1,1,0,0,0-1.414,1.414l6,6a1,1,0,0,0,1.414,0l6-6a1,1,0,0,0-1.414-1.414Z' fill='%23000000'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1rem;
+        pointer-events: none;
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+// Checkbox and radio
+.checkbox,
+.radio {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: auto;
+    margin: 0;
+  }
+  
+  label {
+    margin: 0;
+    cursor: pointer;
+  }
+}
+
+// Input groups
+.input-group {
+  display: flex;
+  
+  .form-control {
+    border-radius: $border-radius-base 0 0 $border-radius-base;
+  }
+  
+  .input-group-text {
+    @include flex-center;
+    padding: $spacing-sm $spacing-md;
+    background-color: $color-background-alt;
+    border: 2px solid $color-primary;
+    border-left: none;
+    border-radius: 0 $border-radius-base $border-radius-base 0;
+    font-size: $font-size-sm;
+    color: $color-text;
+  }
+} 

@@ -1,0 +1,11 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.site-footer {
+  @include flex(row, space-between, center);
+  padding: initial;
+}
+
+#menu-menyu-v-futere {
+  @include flex(row, center);
+}

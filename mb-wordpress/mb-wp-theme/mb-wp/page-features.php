@@ -1,0 +1,313 @@
+<?php
+/*
+ * Template name: Возможности
+ * */
+
+get_header();
+?>
+<header class="fscreen fscreen__posibility" id="up">
+    <div class="container_center anim_cont">
+
+        <div class="fscreen__title wow fadeInUp">Личный музыкальный кабинет.</div>
+        <div class="fscreen__subtitle wow fadeInUp">Музыкальное оформление Вашего <span class="typed-text2"></span> <br class="none"> еще никогда не было таким простым,<br>удобным, качественным и быстрым.</div>
+
+        <div class="block wow fadeInUp"><img src="<?php bloginfo('template_url'); ?>/img/possibility/fscreen.png" alt="Header"></div>
+
+        <div class="fscreen__btn wow fadeInUp">
+            <a href="/request?type=0" class="btn">Тест-плей на 3 дня</a>
+        </div>
+
+        <div class="fscreen__img wow fadeInUp"><img src="<?php bloginfo('template_url'); ?>/img/possibility/fscreen.png" alt="Header"></div>
+    </div>
+</header>
+
+<hr>
+
+<div class="posibility">
+
+    <div class="container_center anim_cont">
+
+        <h1 class=" sectionTitle wow fadeInUp">Возможности.</h1>
+        <div class="posibility__text wow fadeInUp">Подключение к сервису мб позволит Вам получить доступ к каталогу лицензионных треков, юридическую, техническую и музыкальную поддержку.</div>
+
+        <div class="posibilityList wow fadeInUp">
+            <div class="posibilityList__item">
+                <div class="posibilityList__check"></div>
+                <div class="posibilityList__title">Тысячи лицензионных треков</div>
+                <div class="posibilityList__text">Представленные в каталоге музыкального кабинета треки прошли предварительный отбор на пригодность для целей аудиомаркетинга. Сортируйте треки по необходимым фильтрам, выбирайте для удобства работы понравившееся визуальное отображение.</div>
+            </div>
+            <div class="posibilityList__item">
+                <div class="posibilityList__img">
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="posibilityList wow fadeInUp">
+            <div class="posibilityList__item">
+                <div class="posibilityList__img">
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility2.png" alt="">
+                </div>
+            </div>
+            <div class="posibilityList__item">
+                <div class="posibilityList__check"></div>
+                <div class="posibilityList__title">Создание и скачивание плейлистов</div>
+                <div class="posibilityList__text">Просто перетащите треки из каталога в рабочую область плейлиста, присвойте ему название и сохраните. Если доступ в интернет на объекте затруднителен, плейлисты можно скачивать и воспроизводить с устройства.</div>
+            </div>
+        </div>
+
+        <div class="posibilityList wow fadeInUp">
+            <div class="posibilityList__item">
+                <div class="posibilityList__check"></div>
+                <div class="posibilityList__title">Готовые подборки</div>
+                <div class="posibilityList__text">Специалисты мб заранее подготовили огромное количество плейлистов для различных сценариев и типов предприятий. Наиболее частый способ использования подборки - составление персонального плейлиста на ее основе. Попробуйте, это экономит много времени.</div>
+            </div>
+            <div class="posibilityList__item">
+                <div class="posibilityList__img">
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility3.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="posibilityList wow fadeInUp">
+            <div class="posibilityList__item">
+                <div class="posibilityList__img">
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility4.png" alt="">
+                </div>
+            </div>
+            <div class="posibilityList__item">
+                <div class="posibilityList__check"></div>
+                <div class="posibilityList__title">Музыкальная лента</div>
+                <div class="posibilityList__text">Лента - раздел с необходимой последовательностью составленных плейлистов. Вы можете переключать активность плейлиста внутри ленты, настраивать порядок воспроизведения плейлистов или включить режим перемешивания  внутри определенного плейлиста. Можно создавать неограниченное количество индивидуальных лент.</div>
+            </div>
+        </div>
+
+        <div class="posibilityList wow fadeInUp">
+            <div class="posibilityList__item">
+                <div class="posibilityList__check"></div>
+                <div class="posibilityList__title">Настройки по календарю</div>
+                <div class="posibilityList__text">Присвойте группе дней или определенному дню необходимые ленты. Если детально отнестись к данной настройке, можно оперативно подготовить индивидуальную музыкальную программу для каждого дня недели, или например только для выходных дней или будней. Избегайте ежедневного повторения музыкальных треков в одно и тоже время.</div>
+            </div>
+            <div class="posibilityList__item">
+                <div class="posibilityList__img">
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility5.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="posibilityList wow fadeInUp">
+            <div class="posibilityList__item">
+                <div class="posibilityList__img">
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility6.png" alt="">
+                </div>
+            </div>
+            <div class="posibilityList__item">
+                <div class="posibilityList__check"></div>
+                <div class="posibilityList__title">Музыкальный редактор</div>
+                <div class="posibilityList__text">В рамках всех тарифов мб присутствует сопровождение и поддержка наших профессионалов  по составлению плейлиста. Вы можете выбрать тариф, при котором редактор будет осуществлять поддержку по Вашему запросу.</div>
+            </div>
+        </div>
+
+        <div class="posibilityList wow fadeInUp">
+            <div class="posibilityList__item">
+                <div class="posibilityList__check"></div>
+                <div class="posibilityList__title">Юридическая поддержка</div>
+                <div class="posibilityList__text">Фоновая музыка в бизнесе - сфера высокого риска. В РФ периодически происходят проверки со стороны РАО и ВОИС на предмет легальности использования музыкальных произведений. Юридические специалисты мб помогут подготовить ответы для проверяющих инстанций и минимизируют Ваши риски.</div>
+            </div>
+            <div class="posibilityList__item">
+                <div class="posibilityList__img">
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility7.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="posibilitySlider wow fadeInUp">
+        <div class="posibilitySlider__list contant horiz-scroll">
+            <div class="posibilitySlider__item">
+                <div class="posibilitySlider__img">
+                    <div>Тысячи лицензионных треков</div>
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility1.png" alt="">
+                </div>
+                <div class="posibilitySlider__text">
+                    Представленные в каталоге музыкального кабинета треки прошли предварительный отбор на пригодность для целей аудиомаркетинга. Сортируйте треки по необходимым фильтрам, выбирайте для удобства работы понравившееся визуальное отображение.
+                </div>
+            </div>
+            <div class="posibilitySlider__item">
+                <div class="posibilitySlider__img">
+                    <div>Создание и скачивание плейлистов</div>
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility2.png" alt="">
+                </div>
+                <div class="posibilitySlider__text">
+                    Просто перетащите треки из каталога в рабочую область плейлиста, присвойте ему название и сохраните. Если доступ в интернет на объекте затруднителен, плейлисты можно скачивать и воспроизводить с устройства.
+                </div>
+            </div>
+            <div class="posibilitySlider__item">
+                <div class="posibilitySlider__img">
+                    <div>Готовые подборки</div>
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility3.png" alt="">
+                </div>
+                <div class="posibilitySlider__text">
+                    Специалисты мб заранее подготовили огромное количество плейлистов для различных сценариев и типов предприятий. Наиболее частый способ использования подборки - составление персонального плейлиста на ее основе. Попробуйте, это экономит много времени.
+                </div>
+            </div>
+            <div class="posibilitySlider__item">
+                <div class="posibilitySlider__img">
+                    <div>Музыкальная лента</div>
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility4.png" alt="">
+                </div>
+                <div class="posibilitySlider__text">
+                    Лента - раздел с необходимой последовательностью составленных плейлистов. Вы можете переключать активность плейлиста внутри ленты, настраивать порядок воспроизведения плейлистов или включить режим перемешивания  внутри определенного плейлиста. Можно создавать неограниченное количество индивидуальных лент.
+                </div>
+            </div>
+            <div class="posibilitySlider__item">
+                <div class="posibilitySlider__img">
+                    <div>Настройки по календарю</div>
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility5.png" alt="">
+                </div>
+                <div class="posibilitySlider__text">
+                    Присвойте группе дней или определенному дню необходимые ленты. Если детально отнестись к данной настройке, можно оперативно подготовить индивидуальную музыкальную программу для каждого дня недели, или например только для выходных дней или будней. Избегайте ежедневного повторения музыкальных треков в одно и тоже время.
+                </div>
+            </div>
+            <div class="posibilitySlider__item">
+                <div class="posibilitySlider__img">
+                    <div>Музыкальный редактор</div>
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility6.png" alt="">
+                </div>
+                <div class="posibilitySlider__text">
+                    В рамках всех тарифов мб присутствует сопровождение и поддержка наших профессионалов  по составлению плейлиста. Вы можете выбрать тариф, при котором редактор будет осуществлять поддержку по Вашему запросу.
+                </div>
+            </div>
+            <div class="posibilitySlider__item">
+                <div class="posibilitySlider__img">
+                    <div>Юридическая поддержка</div>
+                    <img src="<?php bloginfo('template_url'); ?>/img/possibility/posibility7.png" alt="">
+                </div>
+                <div class="posibilitySlider__text">
+                    Фоновая музыка в бизнесе - сфера высокого риска. В РФ периодически происходят проверки со стороны РАО и ВОИС на предмет легальности использования музыкальных произведений.
+                    Юридические специалисты мб помогут подготовить ответы для проверяющих инстанций и минимизируют Ваши риски.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- end posibility -->
+<hr>
+<!-- begin step -->
+<div class="step">
+
+    <div class="container_center anim_cont">
+
+        <div class="step__title sectionTitle wow fadeInUp">Как запустить фоновую музыку самостоятельно.</div>
+
+        <div class="stepList wow fadeInUp">
+            <div class="stepList__item">
+                <div class="stepList__title">
+                    Создайте нужное количество плейлистов
+                </div>
+                <div class="stepList__text">
+                    Примените фильтры для поиска и добавления треков в плейлист, воспользуйтесь готовыми тематическими подборками, создавайте плейлисты на базе готовых подборок.
+                </div>
+            </div>
+        </div>
+
+        <div class="stepList wow fadeInUp">
+            <div class="stepList__item">
+                <div class="stepList__title">
+                    Добавьте плейлисты в ленты
+                </div>
+                <div class="stepList__text">
+                    Перенесите нужные плейлисты в ленту, установите порядок плейлистов. Создавайте неограниченное количество лент с персональной программой.
+                </div>
+            </div>
+        </div>
+
+        <div class="stepList wow fadeInUp">
+            <div class="stepList__item">
+                <div class="stepList__title">
+                    Настройте календарь
+                </div>
+                <div class="stepList__text">
+                    В зависимости от количества созданных лент и плейлистов, Вы можете настроить индивидуальную музыкальную программу  на каждый день в году или на группы дней.
+                </div>
+            </div>
+        </div>
+
+        <div class="stepList wow fadeInUp">
+            <div class="stepList__item">
+                <div class="stepList__title">
+                    Включайте музыку
+                </div>
+                <div class="stepList__text">
+                    Обновляйте плейлисты самостоятельно и пользуйтесь поддержкой музыкального специалиста, включенной в стоимость тарифа.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stepSlider wow fadeInUp">
+        <div class="stepSlider__list content horiz-scroll">
+            <div class="stepSlideritem">
+                <div class="stepSlider__item">
+                    <div class="stepSlider__title">
+                        Создайте нужное количество плейлистов
+                    </div>
+                    <div class="stepSlider__text">
+                        Примените фильтры для поиска и добавления треков в плейлист, воспользуйтесь готовыми тематическими подборками, создавайте плейлисты на базе готовых подборок.
+                    </div>
+                </div>
+            </div>
+            <div class="stepSlideritem">
+                <div class="stepSlider__item">
+                    <div class="stepSlider__title">
+                        Добавьте плейлисты в ленты
+                    </div>
+                    <div class="stepSlider__text">
+                        Перенесите нужные плейлисты в ленту, установите порядок плейлистов. Создавайте неограниченное количество лент с персональной программой.
+                    </div>
+                </div>
+            </div>
+            <div class="stepSlideritem">
+                <div class="stepSlider__item">
+                    <div class="stepSlider__title">
+                        Настройте календарь
+                    </div>
+                    <div class="stepSlider__text">
+                        В зависимости от количества созданных лент и плейлистов, Вы можете настроить индивидуальную музыкальную программу  на каждый день в году или на группы дней.
+                    </div>
+                </div>
+            </div>
+            <div class="stepSlideritem">
+                <div class="stepSlider__item">
+                    <div class="stepSlider__title">
+                        Включайте музыку
+                    </div>
+                    <div class="stepSlider__text">
+                        Обновляйте плейлисты самостоятельно и пользуйтесь поддержкой музыкального специалиста, включенной в стоимость тарифа..
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end step -->
+
+<hr>
+
+<?php
+get_template_part( 'template-parts/footer_try' );
+?>
+<script>
+    var options = {
+        strings: ['ресторана','магазина','кафе','фитнес-клуба','шоппинг-молла','автосалона','пиццерии','супермаркета'],
+        typeSpeed: 90,
+        loop: true,
+    };
+
+    var typed = new Typed('.typed-text2', options);
+</script>
+
+
+<?php
+get_footer();

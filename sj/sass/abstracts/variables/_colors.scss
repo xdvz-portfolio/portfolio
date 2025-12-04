@@ -1,0 +1,91 @@
+// ==========================================================================
+// Color Variables
+// ==========================================================================
+// Modern corporate color palette with semantic naming
+
+// Brand Colors
+// --------------------------------------------------------------------------
+$color__brand-primary: #2563eb;      // Corporate blue
+$color__brand-secondary: #1e40af;    // Darker blue
+$color__brand-accent: #059669;       // Success green
+$color__brand-warning: #d97706;      // Warning orange
+$color__brand-danger: #dc2626;       // Error red
+
+// Neutral Colors
+// --------------------------------------------------------------------------
+$color__neutral-50: #f8fafc;         // Lightest gray
+$color__neutral-100: #f1f5f9;        // Very light gray
+$color__neutral-200: #e2e8f0;        // Light gray
+$color__neutral-300: #cbd5e1;        // Medium light gray
+$color__neutral-400: #94a3b8;        // Medium gray
+$color__neutral-500: #64748b;        // Base gray
+$color__neutral-600: #475569;        // Medium dark gray
+$color__neutral-700: #334155;        // Dark gray
+$color__neutral-800: #1e293b;        // Very dark gray
+$color__neutral-900: #0f172a;        // Darkest gray
+
+// Background Colors
+// --------------------------------------------------------------------------
+$color__background-body: $color__neutral-900;
+$color__background-screen: $color__neutral-100;
+$color__background-section: $color__neutral-50;
+$color__background-card: #ffffff;
+$color__background-overlay: rgba($color__neutral-900, 0.8);
+
+// Text Colors
+// --------------------------------------------------------------------------
+$color__text-primary: $color__neutral-900;
+$color__text-secondary: $color__neutral-600;
+$color__text-muted: $color__neutral-500;
+$color__text-inverse: #ffffff;
+$color__text-light: $color__neutral-100;
+
+// Link Colors
+// --------------------------------------------------------------------------
+$color__link: $color__brand-primary;
+$color__link-visited: $color__brand-secondary;
+$color__link-hover: $color__brand-accent;
+$color__link-active: $color__brand-secondary;
+$color__link-inverse: $color__text-inverse;
+
+// Form Colors
+// --------------------------------------------------------------------------
+$color__input-background: #ffffff;
+$color__input-border: $color__neutral-300;
+$color__input-border-focus: $color__brand-primary;
+$color__input-text: $color__text-primary;
+$color__input-placeholder: $color__neutral-400;
+
+// Button Colors
+// --------------------------------------------------------------------------
+$color__button-primary-bg: $color__brand-primary;
+$color__button-primary-text: #ffffff;
+$color__button-primary-hover: $color__brand-secondary;
+
+$color__button-secondary-bg: $color__neutral-200;
+$color__button-secondary-text: $color__text-primary;
+$color__button-secondary-hover: $color__neutral-300;
+
+// Border Colors
+// --------------------------------------------------------------------------
+$color__border-light: $color__neutral-200;
+$color__border-medium: $color__neutral-300;
+$color__border-dark: $color__neutral-400;
+
+// Legacy color variables (for backward compatibility)
+// --------------------------------------------------------------------------
+$color__background-hr: $color__border-medium;
+$color__background-button: $color__button-secondary-bg;
+$color__background-pre: $color__background-section;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: $color__brand-primary;
+$color__text-input: $color__input-text;
+$color__text-input-focus: $color__text-primary;
+$color__text-main: $color__text-inverse;
+
+$color__border-button: $color__border-medium;
+$color__border-button-hover: $color__border-dark;
+$color__border-button-focus: $color__brand-primary;
+$color__border-input: $color__input-border;
+$color__border-abbr: $color__border-dark;

@@ -1,0 +1,101 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// Категории WooCommerce
+.woocommerce {
+  .product-category {
+    .category-info {
+      background: red;
+      color: $black;
+    }
+  }
+  
+  div.product-category:hover .category-info {
+    background-color: $black;
+    color: yellow;
+  }
+}
+
+.cat-item-all nav-back product-search-product_cat-filter-item {
+  display: none;
+}
+
+.storefront-full-width-content {
+  &.woocommerce-cart .entry-header,
+  &.woocommerce-checkout .entry-header,
+  &.woocommerce-account .entry-header,
+  .woocommerce-products-header {
+    display: none;
+  }
+}
+
+// Категории на главной странице
+.section-categories-home {
+  margin: 124px 0;
+}
+
+.section-categories__wrapper {
+  @include flex(column);
+  margin-bottom: 0;
+}
+
+.section-categories__row {
+  @include flex(row, initial, initial, wrap);
+  gap: $spacing-lg - 10px;
+  margin-bottom: $spacing-lg - 10px;
+}
+
+.section-categories__item {
+  max-width: 270px;
+  flex: 1 0 33%;
+}
+
+// Интерактивная карта
+.interactive-map {
+  display: flex;
+}
+
+.mobile-map {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .interactive-map {
+    display: none;
+  }
+  
+  .mobile-map {
+    display: flex;
+  }
+}
+
+@include tablet {
+  .section-categories__row {
+    justify-content: center;
+  }
+  
+  .mobile-menu-contacts-wrap {
+    padding: 0 $spacing-sm;
+  }
+  
+  .section-categories-home {
+    margin: 0 !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section-categories__wrapper {
+    margin-bottom: 0px !important;
+  }
+}
+
+@include mobile {
+  .section-categories__item {
+    max-width: 180px;
+    justify-content: center;
+  }
+  
+  .section-categories-home {
+    margin: 30px 0 0 0 !important;
+  }
+} 

@@ -1,0 +1,154 @@
+.contacts {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 150px;
+  overflow: hidden;
+  .title {
+    text-align: left;
+    padding-left: 200px;
+  }
+}
+.contacts_bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.contacts_bg-1024 {
+  display: none;
+}
+.contacts_bg-768 {
+  display: none;
+}
+.contacts_bg-767 {
+  display: none;
+}
+.contacts__wrap {
+  margin-top: 50px;
+  padding-left: 200px;
+  overflow: hidden;
+}
+.contacts__item {
+  margin-bottom: 30px;
+  a {
+    &:hover {
+      color: #00b5e1;
+    }
+  }
+}
+.contacts__item-title {
+  color: #3f4b61;
+  font-size: 16px;
+  line-height: 28px;
+  display: block;
+}
+.contacts__item-link {
+  color: #3f4c61;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 41px;
+  display: inline-block;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+.contacts-developer {
+  margin-top: 60px;
+  display: block;
+}
+@media screen and (max-width: 1399px) {
+  .contacts {
+    padding-top: 100px;
+
+    .title {
+      padding-left: 80px;
+    }
+  }
+  .contacts_bg {
+    display: none;
+  }
+  .contacts_bg-1024 {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .contacts__wrap {
+    padding-left: 80px;
+  }
+  .contacts-bottom {
+    .bottom__down {
+      display: none;
+    }
+    .bottom__social {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .contacts {
+    padding-top: 220px;
+    .title {
+      padding-left: 0;
+    }
+  }
+  .contacts_bg-1024 {
+    display: none;
+  }
+  .contacts_bg-768 {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .contacts__wrap {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contacts {
+    padding-top: 210px;
+  }
+  .contacts_bg-768 {
+    display: none;
+  }
+  .contacts_bg-767 {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  .contacts__wrap {
+    margin-top: 30px;
+  }
+  .contacts__item {
+    margin-bottom: 20px;
+  }
+  .contacts__item-link {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .contacts-developer {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .contacts_bg {
+    max-width: 1200px;
+  }
+  .contacts {
+    .title {
+      //padding-left: 200px;
+    }
+  }
+  .contacts__wrap {
+    //padding-left: 200px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .contacts_bg-767 {
+    right: 0;
+    max-width: 300px;
+  }
+}

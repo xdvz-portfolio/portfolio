@@ -1,0 +1,177 @@
+// ==========================================================================
+// MIXINS
+// ==========================================================================
+
+// Media Query Mixins
+@mixin mobile-first($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media (max-width: $breakpoint-md - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// Flexbox Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  @include flex-column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Button Mixins
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-lg;
+  border: 2px solid transparent;
+  border-radius: $border-radius-base;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all $transition-base;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  
+  &:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background-color: $color-primary;
+  color: $color-background;
+  border-color: $color-primary;
+  
+  &:hover {
+    background-color: darken($color-primary, 10%);
+    border-color: darken($color-primary, 10%);
+  }
+}
+
+@mixin button-outline {
+  @include button-base;
+  background-color: transparent;
+  color: $color-primary;
+  border-color: $color-primary;
+  
+  &:hover {
+    background-color: $color-primary;
+    color: $color-background;
+  }
+}
+
+// Spacing Mixins
+@mixin container {
+  max-width: $max-width-container;
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+  
+  @include mobile-first($breakpoint-lg) {
+    padding: 0 $spacing-md;
+  }
+}
+
+@mixin section-spacing {
+  padding: $spacing-xxxl 0;
+  
+  @include mobile-only {
+    padding: $spacing-xl 0;
+  }
+}
+
+// Visual Effect Mixins
+@mixin card-shadow {
+  box-shadow: $shadow-base;
+  transition: box-shadow $transition-base;
+  
+  &:hover {
+    box-shadow: $shadow-lg;
+  }
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Background Image Mixins
+@mixin bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin bg-contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Form Element Mixins
+@mixin input-base {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  border: 2px solid $color-primary;
+  border-radius: $border-radius-base;
+  font-size: $font-size-base;
+  color: $color-text;
+  background-color: $color-background;
+  transition: border-color $transition-base;
+  
+  &:focus {
+    outline: none;
+    border-color: darken($color-primary, 10%);
+  }
+  
+  &::placeholder {
+    color: lighten($color-text, 40%);
+  }
+} 

@@ -1,0 +1,554 @@
+#slider-header {
+  min-height: 4000px;
+  position: relative;
+  transform: translateY(80px)
+}
+
+._cls1_fe383 { /*!*/
+}
+
+._cls2_fe383 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate3d(0, -50%, 0);
+  z-index: 1;
+  list-style: none
+}
+
+._cls1_c0500 { /*!*/
+}
+
+._cls2_c0500 {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  line-height: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  padding-left: 30px;
+  transition: all;
+  transition-duration: .25ms
+}
+
+._cls2_c0500._is-unactive_c0500 {
+  color: #c4c4c4
+}
+
+._cls2_c0500._is-unactive_c0500:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #c4c4c4;
+  display: block;
+  left: 5px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px
+}
+
+._cls2_c0500._is-active_c0500 {
+  color: #3f4b61
+}
+
+._cls2_c0500._is-active_c0500:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #00b5e1;
+  display: block;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  position: absolute
+}
+
+._cls1_09c3b { /*!*/
+}
+
+._cls2_09c3b {
+  cursor: pointer;
+  color: #3f4b61;
+  margin-top: 40px;
+  display: block;
+  line-height: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  position: relative;
+  padding-left: 30px
+}
+
+._cls2_09c3b:before {
+  position: absolute;
+  content: "";
+  background: url(https://mining-store-demogroup.com/wp-content/themes/mining-store-demo/assets/images/arrow-point-to-right.svg);
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0
+}
+
+._cls1_687d6 { /*!*/
+}
+
+._cls2_687d6 {
+  position: absolute;
+  z-index: 1;
+  left: 130px;
+  top: 42%
+}
+
+._cls1_7cd12 { /*!*/
+}
+
+._cls2_7cd12 {
+  display: flex;
+  align-items: center;
+  text-decoration: none
+}
+
+._cls1_111a4 { /*!*/
+}
+
+._cls2_111a4 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px
+}
+
+._cls2_111a4 span:first-child {
+  color: #3f4c61;
+  font-weight: 600;
+  font-size: 18px
+}
+
+._cls2_111a4 span:last-child {
+  color: #00b5e1;
+  font-weight: 400;
+  margin-top: 5px;
+  font-size: 16px
+}
+
+._cls1_f98de { /*!*/
+}
+
+._cls2_f98de {
+  border: solid #333;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer
+}
+
+._cls2_f98de:hover {
+  opacity: .4
+}
+
+._cls2_f98de._direction-left_f98de {
+  transform: rotate(135deg);
+  margin-left: 1em
+}
+
+._cls2_f98de._direction-right_f98de {
+  transform: rotate(-45deg);
+  margin-right: 1em
+}
+
+._cls1_a51cb { /*!*/
+}
+
+._cls2_a51cb {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #333;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 2px
+}
+
+._cls2_a51cb._active_a51cb {
+  opacity: .5
+}
+
+._cls1_3d2fe { /*!*/
+}
+
+._cls2_3d2fe {
+  top: 50%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between
+}
+
+._cls1_9feba { /*!*/
+}
+
+._cls2_9feba {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0
+}
+
+._cls1_63ff6 { /*!*/
+}
+
+._cls2_63ff6 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1
+}
+
+._cls1_8b988 { /*!*/
+}
+
+._cls2_8b988 {
+  width: 100%;
+  height: 100%
+}
+
+._cls1_2dbfb { /*!*/
+}
+
+._cls2_2dbfb {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%
+}
+
+._cls1_4fe10 { /*!*/
+}
+
+._cls2_4fe10 {
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  user-select: none;
+  pointer-events: none
+}
+
+._cls1_729a5 { /*!*/
+}
+
+._cls2_729a5 {
+  background-color: #fff;
+  box-shadow: 0 4px 54px rgba(0, 0, 0, .25);
+  width: 100%;
+  width: 410px;
+  padding: 15px;
+  transition-duration: .25s
+}
+
+._cls2_729a5._position-leftBottom_729a5 {
+  transform: translate(-400px, -20px)
+}
+
+._cls2_729a5._position-rightTop_729a5 {
+  position: absolute;
+  bottom: 25px;
+  left: 25px
+}
+
+._cls2_729a5._state-open_729a5 {
+  opacity: 1
+}
+
+._cls2_729a5._state-close_729a5 {
+  opacity: 0;
+  z-index: -2
+}
+
+@keyframes _fadeIn_729a5 {
+  0% {
+    opacity: 0;
+    display: block
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes _fadeOut_729a5 {
+  0% {
+    opacity: 1
+  }
+  to {
+    opacity: 0;
+    display: none
+  }
+}
+
+._cls1_72b4d { /*!*/
+}
+
+._cls2_72b4d {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  background: linear-gradient(233.34deg, #00b5e1 14.67%, #098dc4 88.33%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+  outline: none;
+  transform: rotate(45deg)
+}
+
+._cls2_72b4d._close_72b4d {
+  transform: rotate(0deg)
+}
+
+._cls2_72b4d._is-video_72b4d {
+  background: #f61c0d;
+  box-shadow: 0 0 0 rgb(246,28,13);
+  animation: pulse 2s infinite;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(246,28,13, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(246,28,13, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(246,28,13, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(246,28,13, 0.4);
+    box-shadow: 0 0 0 0 rgba(246,28,13, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(246,28,13, 0);
+    box-shadow: 0 0 0 10px rgba(246,28,13, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(246,28,13, 0);
+    box-shadow: 0 0 0 0 rgba(246,28,13, 0);
+  }
+}
+
+._cls1_09030 { /*!*/
+}
+
+._cls2_09030 {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  display: block
+}
+
+._cls1_14825 { /*!*/
+}
+
+._cls2_14825 {
+  line-height: 28px;
+  font-size: 13px;
+  color: #3f4c61
+}
+
+._cls1_eeb6b { /*!*/
+}
+
+._cls2_eeb6b {
+  padding-top: 10px;
+  height: 230px
+}
+
+._cls2_eeb6b img {
+  max-width: 100%
+}
+
+._cplay_86829 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  background: url(https://mining-store-demogroup.com/wp-content/themes/mining-store-demo/assets/images/playyou2.svg);
+  background-size: cover
+}
+
+._citem_86829 {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+  pointer-events: auto
+}
+
+._citem_86829 a {
+  display: block;
+  text-decoration: none
+}
+
+._ctitle_86829 {
+  font-size: 13px;
+  color: #3f4c61;
+  flex: 0 0 100%;
+  margin-top: 10px;
+  font-weight: 600;
+  margin-bottom: 10px
+}
+
+._cduration_86829 {
+  color: #3f4c61;
+  font-size: 14px;
+  opacity: .5;
+  margin-right: 20px
+}
+
+._cls1_0efd0 { /*!*/
+}
+
+._cls2_0efd0 {
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  top: -70px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+  width: 53px;
+  height: 53px
+}
+
+._cls2_0efd0:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(https://mining-store-demogroup.com/wp-content/themes/mining-store-demo/assets/images/icons/arrow.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%
+}
+
+._cls2_0efd0._direction-left_0efd0 {
+  transform: rotate(180deg)
+}
+
+._cls1_294ea { /*!*/
+}
+
+._cls2_294ea {
+  position: absolute;
+  width: 80%;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  z-index: 999
+}
+
+._cls1_319fd { /*!*/
+}
+
+._cls2_319fd {
+  position: absolute;
+  top: -16vh;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%
+}
+
+._cls1_e4bca { /*!*/
+}
+
+._cls2_e4bca {
+  display: block;
+  text-align: center;
+  font-size: 44px;
+  line-height: 50px;
+  color: #3f4c61;
+  position: relative;
+  z-index: 2;
+  font-weight: 500
+}
+
+._cls1_566b5 { /*!*/
+}
+
+._cls2_566b5 {
+  display: block;
+  text-align: center;
+  line-height: 28px;
+  font-size: 16px;
+  color: #3f4c61;
+  width: 100%;
+  max-width: 580px;
+  position: relative;
+  z-index: 2;
+  margin: 20px auto 0
+}
+
+._cls1_c45c4 { /*!*/
+}
+
+._cls2_c45c4 {
+  color: #00b5e1;
+  text-decoration-line: underline
+}
+
+._cls1_feb35 { /*!*/
+}
+
+._cls2_feb35 {
+  background-color: #f61c0d;
+  color: #fff;
+  padding: 4px
+}
+
+._cls1_63e55 { /*!*/
+}
+
+._cls2_63e55 {
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+._cls1_3c915 { /*!*/
+}
+._cls2_3c915 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  height: calc(100vh - 90px)
+}
+
+._cls2_3c915 video {
+  z-index: -1;
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  transform: translateY(-16vh)
+}
+
+@media screen and (max-width: 1199px) {
+  #slider-header {
+    display:none;
+  }
+}
+/*# sourceMappingURL=/app.65d03d88.css.map */

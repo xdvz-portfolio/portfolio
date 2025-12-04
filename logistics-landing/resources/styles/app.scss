@@ -1,0 +1,310 @@
+// ==========================================================================
+// AUTO-FLEET DEMO STYLES
+// Modern SCSS Architecture
+// ==========================================================================
+
+// 1. External dependencies
+@import 'modern-normalize';
+@import 'swiper/swiper-bundle.min.css';
+
+// 2. Variables and configuration
+@import 'common/vars';
+
+// 3. Tools (mixins, functions)
+@import 'common/mixins';
+
+// 4. Base styles
+@import 'common/base';
+@import 'common/fonts';
+@import 'common/typography';
+
+// 5. Components
+@import 'components/buttons';
+@import 'components/header';
+@import 'components/forms';
+
+// 6. Utilities (should be last)
+@import 'common/utilities';
+
+// ==========================================================================
+// LAYOUT SECTIONS
+// ==========================================================================
+
+// Hero Section
+section.hero {
+  @include flex-column;
+  justify-content: flex-start;
+  margin-left: 167px;
+  min-height: 808px;
+  @include bg-cover;
+  background-image: url(../images/banner-map.png);
+  background-position: right 20% top 150%;
+  
+  @include mobile-only {
+    margin: 0 $spacing-sm;
+    min-height: auto;
+    background-image: none;
+  }
+  
+  &-background-mobile {
+    display: none;
+    
+    @include mobile-only {
+      display: block;
+    }
+  }
+  
+  &-headline {
+    line-height: $line-height-tight;
+  }
+  
+  &-caption {
+    color: $color-primary;
+  }
+  
+  &-benefits {
+    &-wrapper {
+      display: inline-flex;
+      gap: $spacing-xxxl;
+      
+      @include mobile-only {
+        flex-direction: column;
+        gap: $spacing-lg;
+      }
+    }
+    
+    &-element {
+      @include flex-column;
+      margin-right: $spacing-xxxl;
+      
+      @include mobile-only {
+        margin-right: 0;
+      }
+    }
+    
+    &-icon {
+      width: 43px;
+      margin-bottom: $spacing-sm;
+    }
+    
+    &-subtitle {
+      font-weight: $font-weight-regular;
+    }
+  }
+}
+
+// Benefits Section
+section.benefits {
+  height: 100%;
+  background: linear-gradient(180deg, $color-background 50%, $color-background-alt 50%);
+  
+  &-wrapper {
+    @include bg-cover;
+    background-image: url(../images/benefits-background.png);
+  }
+}
+
+// Common section patterns
+section {
+  @include section-spacing;
+  
+  &.full-width {
+    width: 100%;
+  }
+  
+  &.contained {
+    @include container;
+  }
+}
+
+// ==========================================================================
+// LEGACY SUPPORT & SPECIFIC COMPONENTS
+// ==========================================================================
+
+// Navigation
+.nav-footer {
+  border: none;
+  padding: 0;
+  
+  @include mobile-only {
+    margin-top: $spacing-xxxl;
+  }
+  
+  li {
+    font-size: $font-size-sm;
+    line-height: 19.6px;
+  }
+}
+
+// Footer
+.footer {
+  min-height: 566px;
+  margin: 0;
+  
+  @include mobile-only {
+    min-height: auto;
+  }
+  
+  &-wrapper {
+    @include bg-cover;
+    background-image: url(../images/footer-bg.png);
+    padding: $spacing-md $spacing-sm;
+    @include flex-column;
+    
+    @include mobile-only {
+      background-image: url(../images/footer-bg-m.png);
+      background-size: 100%;
+    }
+  }
+  
+  &-logo {
+    @include flex-between;
+    width: 100%;
+    margin-right: 0;
+    
+    @include mobile-only {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    &-img {
+      max-width: 137px;
+    }
+    
+    &-desc {
+      width: 137px;
+      align-self: center;
+    }
+  }
+  
+  &-contacts {
+    margin-top: $spacing-xxxl;
+    margin-left: 0;
+    
+    @include mobile-only {
+      margin-top: $spacing-xl;
+    }
+  }
+  
+  &-copyrights {
+    margin-top: $spacing-lg;
+    @include flex-column;
+    gap: $spacing-xs;
+  }
+  
+  &-banner {
+    @include bg-cover;
+    background-image: url(../images/footer-banner.png);
+    margin: $spacing-lg $spacing-sm $spacing-xxxl $spacing-sm;
+    padding: $spacing-md 0 $spacing-lg $spacing-md;
+    
+    @include mobile-only {
+      background-image: url(../images/footer-banner-m.png);
+      background-size: 100%;
+      margin: $spacing-lg $spacing-sm $spacing-xl $spacing-sm;
+      padding: $spacing-md 0 $spacing-lg $spacing-md;
+    }
+    
+    &-headline-br {
+      display: none;
+      
+      @include mobile-only {
+        display: block;
+      }
+    }
+  }
+}
+
+// Tables
+.divTable {
+  width: 100%;
+  max-width: 800px;
+  
+  @media (max-width: 425.98px) {
+    width: 350px;
+  }
+  
+  @media (max-width: 375.98px) {
+    width: 316px;
+  }
+}
+
+.table-banner {
+  @include bg-cover;
+  border-radius: $border-radius-xl;
+  
+  @media (max-width: 425.98px) {
+    background-size: 100%;
+  }
+}
+
+// Tabs
+.tab {
+  &-content {
+    display: none;
+    
+    &.active {
+      display: block;
+    }
+  }
+  
+  &-buttons {
+    @include mobile-only {
+      display: none;
+    }
+  }
+  
+  &-nav {
+    @include mobile-only {
+      margin-bottom: $spacing-xs;
+    }
+  }
+}
+
+// Maps
+iframe.map {
+  width: 100%;
+  height: 400px;
+  
+  @include mobile-only {
+    width: 85vw;
+    height: 275px;
+  }
+}
+
+// Conditions section
+section.conditions {
+  @include mobile-only {
+    margin: 0 $spacing-sm $spacing-xs $spacing-sm;
+  }
+  
+  &-wrapper {
+    @include mobile-only {
+      flex-direction: column;
+      gap: $spacing-lg;
+    }
+  }
+  
+  &-col {
+    @include mobile-only {
+      gap: $spacing-xs;
+    }
+  }
+}
+
+// ==========================================================================
+// DEPRECATED STYLES (for removal in next version)
+// ==========================================================================
+
+// Legacy helper classes - use utility classes instead
+.is-hidden {
+  @extend .hidden;
+}
+
+.is-desktop {
+  @extend .hide-mobile;
+}
+
+.is-mobile {
+  @extend .show-mobile;
+} 

@@ -1,0 +1,55 @@
+{% extends "layout/default.html" %}
+{% set title = "Контакты - мб - сервис доставки лицензионной музыки и инструментарий для аудиомаркетинга" %}
+
+{% block content %}
+<div class="contact section">
+    <div class="container_center">
+
+        <h1 class="contact__title sectionTitle wow fadeInUp">Контакты.</h1>
+        <div class="contactList anim_cont">
+            <div class="contactList__item wow fadeInUp">
+                <div class="contactList__title">Напишите нам</div>
+                <div class="contactList__text">
+                    <span>Общие вопросы</span><br />
+                    info@mb.ru
+                </div>
+                <div class="contactList__text">
+                    <span>Финансы</span><br />
+                    finance@mb.ru
+                </div>
+                <div class="contactList__text">
+                    <span>Поддержка</span><br />
+                    support@mb.ru
+                </div>
+                <div class="contact__icon contactList__icon">
+                    <a rel="nofollow" href="https://t.me/mb" target="_blank"><i class="mdi mdi-telegram"></i></a>
+                    <a rel="nofollow" href="https://wa.me/121212121212" target="_blank"><i class="mdi mdi-whatsapp"></i></a>
+                    <a rel="nofollow" href="https://instagram.com/mb.ru" target="_blank"><i class="mdi mdi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contactList__item wow fadeInUp">
+                <div class="contactList__title">Позвоните нам</div>
+                <div class="contactList__text">
+                    <span>Бесплатный номер</span><br />
+                    <a href="tel://88007004324">8 800 700-43-24</a>
+                </div>
+                <div class="contactList__text">
+                    <span>Москва</span><br />
+                    <a href="tel://84957254324">8 495 725-43-24</a>
+                </div>
+                <div class="contactList__text">
+                    <span>Санкт-Петербург</span><br />
+                    <a href="tel://88127034324">8 812 703-43-24</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact__btn">
+            <a href="message.html" class="btn">Отправить сообщение</a>
+        </div>
+
+    </div>
+</div>
+
+{% include "partials/mbc.html" %}
+{% endblock %}

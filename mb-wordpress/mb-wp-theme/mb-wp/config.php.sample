@@ -1,0 +1,9 @@
+<?php
+
+$CONFIG = array(
+    'api' => array(
+        'endpoint' => 'https://app.mb.com/api/v1',
+        'login' => '',
+        'password' => ''
+    ),
+);

@@ -1,0 +1,16 @@
+// Базовые переменные и миксины
+@use "variables" as *;
+@use "mixins" as *;
+
+// Основные стили
+@use "overrides";
+@use "common";
+@use "header";
+@use "footer";
+
+// WooCommerce стили
+@use "woocommerce";
+
+// Компоненты
+@use "sliders";
+@use "product-slider";

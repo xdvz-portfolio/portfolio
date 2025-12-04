@@ -1,0 +1,401 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// Стили для слайдера товаров
+.rshop-product-slider-section {
+    margin: 124px 0 50px 0;
+    padding: 0 15px;
+    
+    // Заголовок секции
+    .rshop-product-slider-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: center;
+        
+        @include desktop {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+// Контейнер слайдера
+.rshop-product-slider {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    
+    // Обертка Swiper
+    &__wrapper {
+        overflow: visible;
+        padding: 10px 0 60px; // Отступ снизу для пагинации
+    }
+    
+    // Пагинация (только точки)
+    &__navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    // Кнопки навигации (стрелки)
+    &__button {
+        &-prev,
+        &-next {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            
+            &:hover {
+                background-color: #333;
+                border-color: #333;
+                
+                &::after {
+                    border-color: #fff;
+                }
+            }
+            
+            &::after {
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-style: solid;
+                border-width: 2px 2px 0 0;
+                border-color: #333;
+                display: inline-block;
+                position: relative;
+                transition: border-color 0.3s ease;
+            }
+        }
+        
+        &-prev {
+            left: -20px;
+            
+            &::after {
+                transform: rotate(-135deg);
+                right: -2px;
+            }
+        }
+        
+        &-next {
+            right: -20px;
+            
+            &::after {
+                transform: rotate(45deg);
+                left: -2px;
+            }
+        }
+        
+        // Стили для неактивных стрелок
+        &.swiper-button-disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: #f5f5f5;
+            border-color: #e0e0e0;
+            
+            &::after {
+                border-color: #ccc;
+            }
+            
+            &:hover {
+                background-color: #f5f5f5;
+                border-color: #e0e0e0;
+                
+                &::after {
+                    border-color: #ccc;
+                }
+            }
+        }
+    }
+    
+    // Пагинация (точки)
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 12px;
+        
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0.5;
+            margin: 0 4px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease, opacity 0.3s ease;
+            
+            &-active {
+                background: $gold;
+                opacity: 1;
+            }
+            
+            &:hover {
+                background: $gold;
+                opacity: 0.8;
+            }
+            
+            &:focus {
+                outline: 2px solid $gold;
+                outline-offset: 2px;
+                background: $gold;
+                opacity: 0.9;
+            }
+        }
+    }
+    
+    // Стили для слайда с товаром
+    .rshop-product-slide {
+        height: auto; // Высота автоматически подстраивается под контент
+        display: flex; // Добавляем flexbox для центрирования
+        justify-content: center; // Центрируем по горизонтали
+        align-items: flex-start; // Центрируем по вертикали
+        
+        // Стили для плейсхолдера при загрузке
+        &.swiper-slide-loading {
+            position: relative;
+            min-height: 300px;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #f5f5f5;
+                z-index: 1;
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 30px;
+                height: 30px;
+                border: 3px solid #ddd;
+                border-top-color: #333;
+                border-radius: 50%;
+                animation: loader-spin 1s infinite linear;
+                z-index: 2;
+            }
+        }
+
+        & li.product {
+            width: 100%; // Занимаем всю доступную ширину
+            text-align: center; // Центрируем текстовое содержимое
+
+            img {
+                margin: 0 auto 1.618em;
+            }
+            
+            .woocommerce-loop-product__title {
+                font-size: 1rem;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+
+            .pre_title_wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                align-content: center;
+                margin: 0 0 16px;
+
+                .pre_title {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+
+            font-size: .875em;
+
+            .sale-price-origin, .sale-price-dm {
+                color: #717171;
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .price {
+                font-weight: 600;
+                color: #010101;
+            }
+            .woocommerce-loop-product__title {
+                font-size: 1rem;
+            }
+            
+            // Центрируем кнопки и другие элементы
+            .button,
+            .added_to_cart {
+                margin-left: auto;
+                margin-right: auto;
+                display: inline-block;
+            }
+            .woocommerce-Price-amount {
+                font-weight: 600;
+                margin-left: 5px;
+            }
+        }
+        
+    }
+    
+    // Стили для слайда "Посмотреть все товары"
+    .rshop-view-all-slide {
+        display: flex;
+        align-self: center;
+        align-items: center; // Центрируем кнопку по вертикали
+        width: 150px !important;
+        justify-content: center;
+        height: calc(480px * 0.65); // 65% от высоты слайда (≈312px)
+        background-color: #fff;
+        border: 1px dashed #ddd;
+        border-radius: 3px;
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background-color: #f8f8f8;
+            border-color: #ccc;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .rshop-view-all-content {
+            text-align: center;
+            
+            .rshop-view-all-button {
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #333;
+                color: #fff;
+                border-radius: 3px;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: .875em;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background-color: #555;
+                    color: #fff;
+                    text-decoration: none;
+                    transform: translateY(-1px);
+                }
+            }
+        }
+    }
+}
+
+// Анимация для загрузчика
+@keyframes loader-spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+// Медиа-запросы для адаптивности
+@include tablet {
+    .rshop-product-slider-section {
+        margin: 30px 0 40px 0;
+    }
+    
+    .rshop-product-slider {
+        &__button {
+            &-prev,
+            &-next {
+                width: 35px;
+                height: 35px;
+                
+                &::after {
+                    width: 7px;
+                    height: 7px;
+                }
+            }
+        }
+        
+        &__pagination {
+            margin-top: 12px;
+            
+            .swiper-pagination-bullet {
+                width: 8px;
+                height: 8px;
+                margin: 0 4px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .rshop-product-slider-section {
+        margin: 30px 0 40px 0;
+    }
+}
+
+@include mobile {
+    .rshop-product-slider-section {
+        margin: 30px 0 40px 0;
+        
+        .rshop-product-slider-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+    }
+    
+    .rshop-product-slider {
+        &__navigation {
+            margin-top: 10px;
+        }
+        
+        &__button {
+            &-prev {
+                width: 30px;
+                height: 30px;
+                left: -15px;
+                
+                &::after {
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+            
+            &-next {
+                width: 30px;
+                height: 30px;
+                right: -15px;
+                
+                &::after {
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+        }
+        
+        &__pagination {
+            margin-top: 8px;
+            
+            .swiper-pagination-bullet {
+                width: 6px;
+                height: 6px;
+                margin: 0 3px;
+            }
+        }
+    }
+} 

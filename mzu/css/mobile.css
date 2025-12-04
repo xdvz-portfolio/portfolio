@@ -1,0 +1,158 @@
+@media screen and (max-width: 1920px) {
+    .container {
+        padding-right: 150px;
+        padding-left: 150px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 1480px) {
+    .container {
+        padding-right: 100px;
+        padding-left: 100px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h1 {
+        font-size: 39px;
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+
+    .section-image p {
+        font-size: 20px;
+    }
+}
+
+/*
+ Tablet
+  */
+@media screen and (max-width: 770px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    .header__address {
+        font-size: .9em;
+    }
+    .header__contacts {
+        font-size: .9em;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+
+    .section-image p {
+        font-size: 20px;
+    }
+}
+
+/*
+ Mobile
+  */
+@media screen and (max-width: 430px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header_content {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0 1rem;
+        align-items: flex-start;
+        font-size: 1em;
+        flex-direction: column;
+        gap: 15px
+    }
+
+
+    .header__address {
+        font-size: .9em;
+        white-space: pre-line;
+    }
+
+    .header__contacts {
+        font-size: .9em;
+    }
+
+    .main-title {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.4em;
+        white-space: pre-line;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    .iconblock h3 {
+        font-size: 22px
+    }
+
+    .iconblock p {
+        font-size: 18px
+    }
+
+    .iconblock {
+        padding: 15px 0
+    }
+
+
+    .nav {
+        font-size: 0.8em;
+    }
+
+    .nav-bar {
+        margin-right: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .section-image p {
+        font-size: 14px;
+    }
+
+    .section-image {
+        height: 640px;
+    }
+
+    .contacts_content {
+        flex-direction: column
+    }
+
+    .contacts_map {
+        margin-top: 15px;
+        width: 80vw;
+    }
+}

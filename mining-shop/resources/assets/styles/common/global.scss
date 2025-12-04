@@ -1,0 +1,288 @@
+/**
+ * Global
+ */
+
+//a {
+//  color: map-get($theme-colors, 'primary');
+//}
+
+/**
+ * Block editor color palette utilities
+ * @see https://git.io/JeyD6
+ */
+
+//@each $color-name, $color-value in $theme-colors {
+//  .has-#{$color-name}-color {
+//    color: $color-value;
+//  }
+//
+//  .has-#{$color-name}-background-color {
+//    background-color: $color-value;
+//  }
+//}
+
+/**
+ * Global resets
+ */
+
+#lottie {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  text-align: center;
+  top: 0;
+  opacity: 1;
+  z-index: 99999;
+  position: absolute;
+  -webkit-transition: all 1.4s ease-in-out;
+  -o-transition: all 1.4s ease-in-out;
+  transition: all 1.4s ease-in-out;
+}
+.pageback {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  -webkit-transition: all 1.4s ease-in-out;
+  -o-transition: all 1.4s ease-in-out;
+  transition: all 1.4s ease-in-out;
+  z-index: 9999;
+  opacity: 1;
+  top: 0;
+}
+body {
+  font-family: Ubuntu, sans-serif;
+  font-size: 14px;
+  min-width: 320px;
+  max-width: 2560px;
+  color: #3f4b61;
+  position: relative;
+  margin: 0 auto;
+  background: #fff;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1;
+  font-weight: 400;
+  overflow: auto !important;
+  padding: 0;
+}
+.section.steps {
+  height: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+p {
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+}
+h4 {
+  margin: 0;
+  padding: 0;
+}
+h5 {
+  margin: 0;
+  padding: 0;
+}
+h6 {
+  margin: 0;
+  padding: 0;
+}
+strong {
+  font-weight: 700;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+input {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  &::-webkit-input-placeholder {
+    color: #fff;
+  }
+  &:-moz-placeholder {
+    color: #fff;
+  }
+  &::-moz-placeholder {
+    color: #fff;
+  }
+  &:-ms-input-placeholder {
+    color: #fff;
+  }
+}
+textarea {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  &::-webkit-input-placeholder {
+    color: #fff;
+  }
+  &:-moz-placeholder {
+    color: #fff;
+  }
+  &::-moz-placeholder {
+    color: #fff;
+  }
+  &:-ms-input-placeholder {
+    color: #fff;
+  }
+}
+@media screen and (max-width: 908px) {
+  .pageback {
+    display: none !important;
+  }
+  #lottie {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1200px) and (min-height: 700px) {
+  .mobile_version {
+    display: none;
+  }
+}
+
+
+/**
+ * Content container
+ */
+
+.container {
+  width: 100%;
+  height: auto;
+  min-width: 290px;
+  max-width: 1520px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 1600px) and (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+  .steps_4 {
+    padding: 0 !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .gwx-message__bottom {
+    span {
+      width: 70% !important;
+    }
+  }
+}
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .container {
+    max-width: 984px;
+  }
+}
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .container {
+    max-width: 728px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .container {
+    max-width: 92%;
+  }
+}
+
+button:focus {
+  outline: initial;
+}
+
+/**
+* Title & Subtitle
+*/
+
+.title {
+  display: block;
+  text-align: center;
+  font-size: 44px;
+  line-height: 50px;
+  color: #3f4c61;
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+}
+.subtitle {
+  display: block;
+  text-align: center;
+  line-height: 28px;
+  font-size: 16px;
+  color: #3f4c61;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .title-top {
+    font-size: 44px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+}
+/*  IDK
+* WTF IS THAT
+*/
+
+@media screen and (max-width: 700px) {
+  .gwx-dline iframe {
+    margin-top: -120px !important;
+  }
+
+  .gwx-dline h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .gwx-dline iframe {
+    margin-top: 0px !important;
+  }
+
+  .gwx-dline img {
+    display: none;
+  }
+
+  .gwx-dline h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}

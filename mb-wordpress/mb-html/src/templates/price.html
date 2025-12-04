@@ -1,0 +1,215 @@
+{% extends "layout/default.html" %}
+{% set title = "Цены - мб - сервис доставки лицензионной музыки и инструментарий для аудиомаркетинга" %}
+
+{% block content %}
+<div class="tariffs tariffs__fs">
+    <div class="container_center anim_cont">
+
+        <h1 class="tariffs__title sectionTitle wow fadeInUp">Тарифы</h1>
+        <div class="tariffs__text wow fadeInUp">Тарификация мб зависит от сферы деятельности предприятия, количества подключемых объектов, их размеров и того, чьи специалисты будут заниматься настройкой и поддержкой музыкальной программы</div>
+
+        <div class="tariffsList nobg anim_cont">
+            <div class="tariffsList__range wow fadeInUp">
+                <div id="slider-range-max"></div>
+                <span class="value">0</span>
+            </div>
+
+            <div class="rangeList wow fadeInUp anim_cont">
+                <div class="rangeList__item wow fadeInUp">
+                    <div class="rangeList__btn active">
+                        <a href="request.html?type=0&" class="btn">Тест-плей на 3 дня</a>
+                    </div>
+                </div>
+
+                <div class="rangeList__item rangeList__item-select wow fadeInUp">
+                    <div class="rangeList__title">Рестораны и питание</div>
+                </div>
+
+                <div class="rangeList__item wow fadeInUp">
+                    <div class="rangeList__title">Торговые предприятия</div>
+                </div>
+
+                <div class="rangeList__item wow fadeInUp">
+                    <div class="rangeList__title">Спорт и развлечения</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tariffsMob anim_cont">
+            <div class="tariffsMob__item wow fadeInUp">
+                <a href="request.html?type=test" class="btn">Тест-плей на 3 дня</a>
+            </div>
+            <div class="tariffsMob__item wow fadeInUp">
+                <a href="#" class="rangeList__title tariffsMob__active" id="rest">Рестораны и питание</a>
+            </div>
+            <div class="tariffsMob__item wow fadeInUp">
+                <a href="#" class="rangeList__title" id="torg">Торговые предприятия</a>
+            </div>
+            <div class="tariffsMob__item wow fadeInUp">
+                <a href="#" class="rangeList__title" id="sport">Спорт и развлечения</a>
+            </div>
+        </div>
+
+        <div class="tariffsCalc anim_cont" id="range-scroll">
+            <div class="tariffsCalc__time wow fadeInUp">
+                <div class="swicher">
+                    <span class="quart">Квартал</span>
+                    <input type="checkbox" id="swich" name="swich" value="1" checked>
+                    <label for="swich" class="swicher__Item"></label>
+                    <span class="year tariff_active">Год</span>
+                </div>
+            </div>
+
+            <div class="tariffsCalcList wow fadeInUp anim_cont">
+                <div class="tariffsCalcList__item wow fadeInUp">
+                    <div class="tariffsCalcList__content">
+                        <div class="tariffsCalcList__title">Стартовый</div>
+                        <div class="tariffsCalcList__text">Музыкальный редактор осуществляет настройку перед запуском. Обновление плейлистов из личного кабинета доступно пользователю в любой момент.</div>
+                        <div class="tariffsCalcList__price"><span>1450</span></div>
+                        <div class="tariffsCalcList__val">руб/мес</div>
+                        <div class="tariffsCalcList__sale"><span class="sale">Экономия 20%</span></div>
+                        <div class="tariffsCalcList__button"><a href="request.html?type=1&" class="btn btn__transpsrent">Подключить</a></div>
+                    </div>
+                </div>
+                <div class="tariffsCalcList__item wow fadeInUp">
+                    <div class="tariffsCalcList__content">
+                        <div class="tariffsCalcList__title">Профессональный</div>
+                        <div class="tariffsCalcList__text">Тариф Стартовый +  перед запуском осуществляется расширенная настройка, Редактор обновляет плейлисты самостоятельно либо по первому запросу, </div>
+                        <div class="tariffsCalcList__price"><span>2450</span></div>
+                        <div class="tariffsCalcList__val">руб/мес</div>
+                        <div class="tariffsCalcList__sale"><span class="sale">Экономия 20%</span></div>
+                        <div class="tariffsCalcList__button"><a href="request.html?type=2&" class="btn btn__transpsrent">Подключить</a></div>
+                    </div>
+                </div>
+                <div class="tariffsCalcList__item wow fadeInUp">
+                    <div class="tariffsCalcList__content">
+                        <div class="tariffsCalcList__title">Сетевой</div>
+                        <div class="tariffsCalcList__text">Настроим наш сервис под цели и возможноности Вашего бизнеса. Проведем профессиональный и детальный анализ музыкальных предпочтений ваших клиентов, </div>
+                        <div class="tariffsCalcList__price"><span>По запросу</span></div>
+                        <div class="tariffsCalcList__val">&nbsp;</div>
+                        <div class="tariffsCalcList__sale"><span>От 6 объектов</span></div>
+                        <div class="tariffsCalcList__button"><a href="request.html?type=3&" class="btn btn__transpsrent">Подключить</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<div class="provide">
+    <div class="container_center anim_cont">
+
+        <div class="sectionTitle wow fadeInUp">В рамках всех тарифов предоставляется:</div>
+
+        <div class="questionsList wow fadeInUp anim_cont">
+            <div class="questionsList__item wow fadeInUp">
+                <div class="questionsList__iconcont">
+                    <div class="questionsList__icon"><i class="mdi mdi-check"></i></div>
+                </div>
+                <div class="questionsList__title show">
+                    Доступ в личный музыкальный кабинет.
+                </div>
+            </div>
+            <div class="questionsList__item wow fadeInUp">
+                <div class="questionsList__iconcont">
+                    <div class="questionsList__icon"><i class="mdi mdi-check"></i></div>
+                </div>
+                <div class="questionsList__title show">
+                    Тысячи лицензионных треков.
+                </div>
+            </div>
+            <div class="questionsList__item wow fadeInUp">
+                <div class="questionsList__iconcont">
+                    <div class="questionsList__icon"><i class="mdi mdi-check"></i></div>
+                </div>
+                <div class="questionsList__title show">
+                    Юридическое содействие.
+                </div>
+            </div>
+            <div class="questionsList__item wow fadeInUp">
+                <div class="questionsList__iconcont">
+                    <div class="questionsList__icon"><i class="mdi mdi-check"></i></div>
+                </div>
+                <div class="questionsList__title show">
+                    Подготовка плейлистов перед запуском.
+                </div>
+            </div>
+            <div class="questionsList__item wow fadeInUp">
+                <div class="questionsList__iconcont">
+                    <div class="questionsList__icon"><i class="mdi mdi-check"></i></div>
+                </div>
+                <div class="questionsList__title show">
+                    Готовые подборки.
+                </div>
+            </div>
+            <div class="questionsList__item wow fadeInUp">
+                <div class="questionsList__iconcont">
+                    <div class="questionsList__icon"><i class="mdi mdi-check"></i></div>
+                </div>
+                <div class="questionsList__title show">
+                    Техническая поддержка.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% include "partials/footer_try.html" %}
+
+{% endblock %}
+
+{% block footer %}
+
+<script type="text/javascript">
+    const urlParams = new URLSearchParams(window.location.search);
+
+    $(document)['ready'](function () {
+        setTimeout(function () {
+            var companyTypeValue = parseInt(urlParams.get('type'));
+
+            var tariffsPrice1 = $(".tariffsCalcList__price").eq(0),
+                tariffsPrice2 = $(".tariffsCalcList__price").eq(1);
+
+            if (typeof(companyTypeValue) == 'number' && !isNaN(companyTypeValue)) {
+                $('#torg, #rest, #sport').removeClass('tariffsMob__active');
+                $('.rangeList__item').removeClass('rangeList__item-select');
+                switch (companyTypeValue) {
+                    case 0:
+                        $('#rest').addClass('tariffsMob__active');
+                        $($('.rangeList__item').get(1)).addClass('rangeList__item-select');
+                        $('#slider-range-max').slider('option', 'value', 0);
+                        $(".value").text(0);
+                        tariffsPrice1.html('<span>1450</span>');
+                        tariffsPrice2.html('<span>2450</span>');
+                        break;
+                    case 1:
+                        $('#torg').addClass('tariffsMob__active');
+                        $($('.rangeList__item').get(2)).addClass('rangeList__item-select');
+                        $('#slider-range-max').slider('option', 'value', 1);
+                        $(".value").text(1);
+                        tariffsPrice1.html('<span>1150</span>');
+                        tariffsPrice2.html('<span>2150</span>');
+                        break;
+                    case 2:
+                        $('#sport').addClass('tariffsMob__active');
+                        $($('.rangeList__item').get(3)).addClass('rangeList__item-select');
+                        $('#slider-range-max').slider('option', 'value', 2);
+                        $(".value").text(2);
+                        tariffsPrice1.html('<span>2750</span>');
+                        tariffsPrice2.html('<span>3750</span>');
+                        break;
+                    default:
+                }
+                $("input[type=range]").val(companyTypeValue.toString());
+                RefreshTariffUrl();
+            }
+        }, 100);
+    });
+</script>
+{% endblock %}

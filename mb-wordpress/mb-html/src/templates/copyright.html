@@ -1,0 +1,37 @@
+{% extends "layout/default.html" %}
+{% set title = "Защита прав - мб - сервис доставки лицензионной музыки и инструментарий для аудиомаркетинга" %}
+
+{% block content %}
+<div class="copyright section">
+    <div class="container_center">
+
+        <div class="copyrightList wow fadeInUp">
+            <div class="copyrightList__item">
+                <img src="img/copyright.png" alt="">
+            </div>
+            <div class="copyrightList__item">
+                <div class="copyrightList__title">Доставим Вашу музыку в <span class="typed-text3"></span></div>
+                <div class="copyrightList__text">Присоединяйтесь к нашему сообществу правообладателей, продюсеров, авторов, музыкантов и диджеев. Зарабатывйте и продвигайте Ваш музыкальный контент с помощью мб. </div>
+                <div class="copyrightList__btn">
+                    <a href="link.html" class="btn">Отправить ссылку на музыку</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% include "partials/mbc.html" %}
+{% endblock %}
+
+{% block footer %}
+<script>
+    var options = {
+        strings: ['ресторан.','магазин.','кафе.','фитнес-клуб.','шоппинг-молл.','автосалон.','пиццерию.','супермаркет.'],
+        typeSpeed: 90,
+        loop: true,
+    };
+
+    var typed = new Typed('.typed-text3', options);
+</script>
+{% endblock %}

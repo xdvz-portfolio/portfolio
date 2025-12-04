@@ -1,0 +1,59 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.container {
+  @include container;
+}
+
+.sbttBacktotop {
+  bottom: $spacing-xl * 2;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"], .button, .widget a.button {
+  @include button-base;
+}
+
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .widget a.button:hover {
+  background-color: #717171;
+  border-color: #717171;
+  color: #ffffff;
+}
+
+.content-area {
+  height: auto;
+  margin: $spacing-xl 0;
+}
+
+.woocommerce-breadcrumb {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-full {
+    max-width: 72.4989378333em !important;
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 66.49894em) {
+  .col-full {
+    @include flex(column-reverse);
+    margin-left: $spacing-md;
+    margin-right: $spacing-md;
+    padding: 0;
+  }
+}
+
+@include mobile {
+  .col-full {
+    @include flex(column-reverse);
+  }
+}
+
+.grow {
+  @include grow;
+}

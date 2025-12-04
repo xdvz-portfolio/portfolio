@@ -1,0 +1,40 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// Стили для корзины
+.quantity .qty {
+  width: 5em;
+  text-align: center;
+}
+
+table.cart td.product-quantity .qty {
+  width: 5em;
+  max-width: 5em;
+}
+
+p.woocommerce-shipping-destination {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .site-header-cart .cart-contents .count {
+    display: none;
+    font-weight: 400;
+    opacity: .5;
+    font-size: .875em;
+    margin-right: $spacing-sm;
+  }
+  
+  .site-header-cart .cart-contents .amount {
+    margin-right: .6em;
+  }
+  
+  .site-header-cart .cart-contents {
+    margin-right: $spacing-md + 3px;
+  }
+  
+  table.cart .qty {
+    width: 5em;
+    max-width: 5em;
+  }
+} 

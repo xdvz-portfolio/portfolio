@@ -1,0 +1,37 @@
+{% extends "layout/default.html" %}
+{% set title = "" %}
+
+{% block content %}
+
+<div class="send">
+    <div class="container_center">
+
+        <h1 class="send__title sectionTitle">Заявка</h1>
+    
+        <div class="sendContainer">
+            <div class="sendContainer__title">Отправляем...</div>
+            <div class="sendContainer__img"><div style="margin:0 auto; width: 300px;" id="SentSuccess"></div></div>
+            <div class="sendContainer__title">Благодарим за обращение!</div>
+            <div class="sendContainer__text">Мы уже работаем над Вашим запросом.</div>
+        </div>
+        
+    </div>
+</div>
+
+{% include "partials/mbc.html" %}
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript">
+    var animation = bodymovin.loadAnimation({
+        container: document.getElementById('SentSuccess'), // Required
+        path: '../json/letter-fly.json',
+        renderer: 'svg',
+        loop: true,
+        autoplay: false
+    });
+    animation.setSpeed(0.3);
+    animation.setDirection(1);
+    animation.play();
+</script>
+{% endblock %}

@@ -1,0 +1,331 @@
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+/* Extra large devices (large laptops and desktops, 1600px and down) */
+@media only screen and (max-width: 1621px) {
+  nav ul li {
+    display: inline-flex;
+    padding-right: 2rem;
+  }
+}
+
+/* Large laptops and desktops, 1450px and down */
+@media only screen and (max-width: 1450px) {
+  .container {
+    padding-right: 129px;
+    padding-left: 131px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  nav ul li {
+    display: inline-flex;
+    padding-right: 2rem;
+  }
+}
+
+/* Large laptops and desktops, 1250px and down */
+@media only screen and (max-width: 1230px) {
+  .container {
+    padding-right: 129px;
+    padding-left: 131px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  nav ul li {
+    display: inline-flex;
+    padding-right: 1.6rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (max-width: 1184px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 769px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .services-item__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .services-item {
+    width: 100%;
+  }
+
+  .services-cta {
+    display: none;
+  }
+
+  .products-block {
+    background: url("../../images/service-1-tablet.png") no-repeat center;
+    background-size: cover;
+
+    &:nth-child(2) {
+      background: url("../../images/service-2-tablet.png") no-repeat center;
+      background-size: cover;
+    }
+
+    &:nth-child(3) {
+      background: url("../../images/service-3-tablet.png") no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  a.brand {
+    align-self: center;
+    width: 136px;
+  }
+
+  .nav-primary {
+    padding: 33px 0 21px 0;
+  }
+
+  .header__tel {
+    padding: 40px 0 26px;
+  }
+
+  .nav-secondary ul li {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .services-cta__mobile-container {
+    display: flex;
+  }
+
+  .services-cta__mobile {
+    color: #fff;
+    padding: 24px 50.5px;
+    background: #5C7801;
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+
+  #mega-menu-wrap-secondary_navigation #mega-menu-secondary_navigation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-info {
+    margin-top: 10px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media only screen and (max-width: 480px) {
+  #mega-menu-wrap-primary_navigation .mega-menu-toggle + #mega-menu-primary_navigation {
+    height: 35vh;
+  }
+
+  .header__tel {
+    display: none;
+  }
+
+  .about {
+    padding: 80px 0;
+    background: none;
+  }
+
+  section.products {
+    display: none;
+  }
+
+  section.products-mobile {
+    display: block;
+  }
+
+  .products-block-mobile__image {
+    width: 100%;
+    height: 285px;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 21px;
+
+    h2 {
+      color: #fff;
+      margin: 0 87px 21px 21px;
+    }
+  }
+
+  #products-mobile > div > div > div:nth-child(1) > div.products-block-mobile__image {
+    background: url("../../images/service-1-mobile.png") no-repeat center center;
+    background-size: cover;
+  }
+  
+  #products-mobile > div > div > div:nth-child(2) > div.products-block-mobile__image {
+    background: url("../../images/service-2-mobile.png") no-repeat center center;
+    background-size: cover;
+  }
+  
+  #products-mobile > div > div > div:nth-child(3) > div.products-block-mobile__image {
+    background: url("../../images/service-3-mobile.png") no-repeat center center;
+    background-size: cover;
+  }
+
+  .products-block-mobile-item {
+    margin-bottom: 40px;
+  }
+
+  .products-block-mobile__desc {
+    margin-bottom: 20px;
+  }
+
+  .products-block-mobile__bullet-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .products-block-mobile__bullet {
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(58, 58, 58, 0.3);
+    border-radius: 100px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .products-block-mobile__cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .products-block-mobile__cta-price {
+    margin-bottom: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #5C7801;
+    padding: 22px 0;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #DDDDDD;
+  }
+
+  .products-block-mobile__cta-button {
+    display: flex;
+    color: #fff;
+    padding: 24px 0;
+    width: 100%;
+    justify-content: center;
+    background: #5C7801;
+    border-radius: 10px;
+  }
+
+  .contacts-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contacts-info__headline {
+    margin-bottom: 10px;
+  }
+
+  .services {
+    margin-top: 84px;
+  }
+
+  .services__header-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .services-item {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .services-item__img {
+    margin-bottom: 10px;
+  }
+  
+  .services-item-desc {
+    margin: 30px 0 20px;
+  }
+  
+  .services-item-price {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .services-cta__mobile-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .services-cta__mobile {
+    display: flex;
+    width: 100%;
+    color: #fff;
+    background: #5C7801;
+    border-radius: 10px;
+  }
+
+  .footer__column-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__row {
+    margin-top: 67px;
+    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-copyrights {
+    margin: 0;
+  }
+
+  .footer__column {
+    align-items: center !important;
+  }
+
+  nav.nav-secondary {
+    padding: 53px 0 54px 0;
+  }
+
+  .footer-cta {
+    padding: 24px 25vw;
+  }
+
+  .content-info {
+    margin-top: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+

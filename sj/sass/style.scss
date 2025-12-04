@@ -1,0 +1,103 @@
+/*!
+Theme Name: Corporate Business Demo
+Theme URI: https://github.com/username/corporate-business-demo
+Author: Portfolio Author
+Author URI: https://portfolio-demo.com/
+Description: Modern corporate business website theme with responsive design and customizable sections. Built for portfolio demonstration purposes.
+Version: 1.0.0
+Tested up to: 6.0
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: corporate-business-demo
+Tags: business, corporate, responsive, portfolio-demo, custom-logo, custom-menu, featured-images, one-column, two-columns, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Corporate Business Demo is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Abstracts
+	- Variables (colors, typography, spacing)
+	- Mixins (reusable style snippets)
+# Generic
+	- Normalize (cross-browser consistency)
+	- Box sizing (border-box for all elements)
+# Base
+	- Typography (headings, text, fonts)
+	- Elements (basic HTML elements)
+	- Links (link styles and states)
+	- Forms (input fields, buttons)
+# Layouts
+	- Grid systems and layout containers
+# Components
+	- Navigation (menus, breadcrumbs)
+	- Posts and pages (content styling)
+	- Comments (comment sections)
+	- Widgets (sidebar widgets)
+	- Media (images, videos)
+	- Captions and galleries
+# Plugins
+	- Jetpack (infinite scroll, etc.)
+	- WooCommerce (if applicable)
+# Theme
+	- Main Screen (hero section)
+	- About (about us section)
+	- Statistics (stats/counters)
+	- Additional Info (extra content blocks)
+	- Footer (site footer)
+	- Mobile Responsive (mobile-specific styles)
+# Utilities
+	- Accessibility (screen readers, focus)
+	- Alignments (text/element positioning)
+--------------------------------------------------------------*/
+
+// Import abstracts first (variables and mixins)
+@import "abstracts/abstracts";
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+@import "generic/normalize";
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+// Uncomment for specific layout needs:
+// @import "layouts/content-sidebar";
+// @import "layouts/sidebar-content";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/components";
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+@import "plugins/jetpack/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Theme Sections
+--------------------------------------------------------------*/
+@import "theme/main";
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+@import "utilities/accessibility";
+@import "utilities/alignments";

@@ -1,0 +1,198 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// Основные стили карточки товара
+.single-product div.product {
+  p.price {
+    @include flex(row, initial, initial, initial);
+    font-weight: 700;
+    margin-bottom: initial;
+    margin: initial;
+  }
+  
+  .product_meta {
+    border-top: initial;
+    font-size: 0.875em;
+  }
+}
+
+.price-single-dm {
+  font-size: $font-size-sm;
+  font-weight: 600;
+  margin-bottom: 1.41575em;
+  margin-left: $spacing-xs;
+}
+
+.single-sale-price {
+  font-size: 1.41575em;
+  padding: 0 $spacing-sm 0 0;
+  display: inline-flex;
+  margin-top: 1.41575em;
+  color: $gray;
+}
+
+.h1,
+.product_title,
+.entry-title {
+  margin-bottom: initial;
+}
+
+.srednaya-ploshad {
+  margin-bottom: 1.21575em;
+}
+
+.pa_czvet {
+  display: inline-block;
+  height: 19px;
+}
+
+// Вкладки продукта (Описание, Детали, Отзывы)
+.product .woocommerce-tabs ul.tabs {
+  width: 100%;
+  float: none;
+  margin-right: 5.8823529412%;
+}
+
+.woocommerce div.product .woocommerce-tabs {
+  ul.tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.618em;
+    overflow: hidden;
+    position: relative;
+    
+    &::before {
+      position: absolute;
+      content: ' ';
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+    
+    li {
+      display: inline-block;
+      position: relative;
+      z-index: 0;
+      padding: 0 1em;
+      
+      &.active {
+        z-index: 2;
+        border-bottom-width: 2px;
+        border-bottom-color: #777;
+        
+        &::before {
+          box-shadow: 2px 2px 0 $white;
+        }
+        
+        &::after {
+          box-shadow: -2px 2px 0 $white;
+        }
+        
+        a {
+          color: inherit;
+          text-shadow: inherit;
+          font-weight: bold;
+        }
+      }
+      
+      &::after,
+      &::before {
+        border: 1px solid #d3ced2;
+        position: absolute;
+        bottom: -1px;
+        width: 0;
+        height: 0;
+        content: ' ';
+      }
+      
+      &::before {
+        left: -6px;
+        border-bottom-right-radius: 4px;
+        border-width: 0 1px 1px 0;
+        box-shadow: 2px 2px 0 #ebe9eb;
+      }
+      
+      &::after {
+        right: -6px;
+        border-bottom-left-radius: 4px;
+        border-width: 0 0 1px 1px;
+        box-shadow: -2px 2px 0 #ebe9eb;
+      }
+      
+      a {
+        display: inline-block;
+        padding: .5em 0;
+        color: #515151;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.woocommerce .wc-tabs li a:focus,
+.ui-state-focus:focus {
+  outline: none !important;
+}
+
+.ui-tabs-anchor:active,
+.ui-tabs-anchor:focus {
+  outline: none;
+}
+
+.storefront-full-width-content .woocommerce-tabs .panel {
+  width: 65.2173913043%;
+  float: none;
+  margin-right: 0;
+  margin-bottom: initial;
+}
+
+.woocommerce-tabs {
+  ul.tabs {
+    width: 29.4117647059%;
+    float: left;
+    margin-right: 5.8823529412%;
+    border-top: initial;
+    border-bottom: 1px solid;
+    
+    li.active::after {
+      right: 1em;
+    }
+  }
+  
+  .panel {
+    width: 64.7058823529%;
+    float: none;
+    margin-right: 0;
+    margin-top: 0;
+  }
+}
+
+.dopolnitelnye-parametry {
+  text-transform: uppercase;
+  font-family: $font-primary;
+  font-size: $font-size-sm;
+  font-weight: 400;
+  margin-bottom: 0.5407911001em;
+}
+
+.dopolnitelnye-parametry-single-product {
+  font-family: $font-primary;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  color: $black;
+}
+
+.a .woocommerce-product-attributes .shop_attributes {
+  color: $black;
+}
+
+@media (min-width: 768px) {
+  .woocommerce-tabs {
+    padding-top: initial;
+    padding-bottom: initial;
+    border-bottom: solid 1px;
+    margin-bottom: $spacing-lg - 10px;
+  }
+} 

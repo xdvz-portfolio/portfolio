@@ -1,0 +1,107 @@
+// ==========================================================================
+// BASE STYLES
+// ==========================================================================
+
+// Box sizing reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Root styles
+html {
+  scroll-behavior: smooth;
+  
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @include font-base;
+  color: $color-text;
+  background-color: $color-background;
+  margin: 0;
+  line-height: $line-height-relaxed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Remove default margins
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+figure, hr,
+fieldset, legend {
+  margin: 0;
+}
+
+// Remove list styles
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+// Make images responsive
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Remove built-in form typography styles
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// Links
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $transition-base;
+  
+  &:hover {
+    color: darken($color-primary, 15%);
+  }
+}
+
+// Focus styles
+:focus-visible {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}
+
+// Button reset
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+// Form elements
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+}
+
+// Tables
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Accessibility helpers
+.sr-only {
+  @include sr-only;
+} 

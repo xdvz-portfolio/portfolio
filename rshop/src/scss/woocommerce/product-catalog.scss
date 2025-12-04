@@ -1,0 +1,142 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+// Сетка товаров
+ul.products {
+  li.product {
+    width: 46.411765%;
+    float: left;
+    margin-right: 5.8823529412%;
+    @include flex(column, center, center);
+    min-height: 480px;
+    
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+    
+    .price {
+      font-weight: 600;
+      color: $black;
+    }
+  }
+}
+
+.wc-block-grid__products {
+  li.product,
+  .wc-block-grid__product {
+    .price {
+      font-weight: 600;
+      color: $black;
+    }
+  }
+}
+
+.woo-product-short-desc {
+  color: $black;
+  margin-bottom: .5407911001em;
+  text-align: center;
+}
+
+.sale-price-origin {
+  color: $gray;
+  font-size: $font-size-sm;
+  font-weight: 500;
+}
+
+.sale-price-dm {
+  color: $gray;
+  font-size: $font-size-sm;
+  font-weight: 500;
+}
+
+// Переключатель Grid/List
+.gridlist-toggle {
+  float: right;
+  
+  .dashicons:before,
+  .dashicons {
+    font-size: 1.2em;
+    height: 1.2em;
+    width: 1.2em;
+  }
+  
+  a.active {
+    color: $black;
+    background-color: $gold;
+  }
+}
+
+.dashicons-grid-view:before {
+  content: "\f180";
+}
+
+.dashicons-exerpt-view:before {
+  content: "\f214";
+}
+
+// Слайдер продуктов
+.wcpscwc-product-slider {
+  button.slick-next {
+    background: $white url(/wp-content/themes/rshop/assets/icons/forward.svg) center center no-repeat !important;
+    background-size: 30px 30px !important;
+    outline: none !important;
+    
+    &:hover,
+    &:focus {
+      background-color: $gold !important;
+    }
+  }
+  
+  button.slick-prev {
+    background: $white url(/wp-content/themes/rshop/assets/icons/back.svg) center center no-repeat !important;
+    background-size: 30px 30px !important;
+    outline: none !important;
+    
+    &:hover,
+    &:focus {
+      background-color: $gold !important;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  ul.products li.product:nth-of-type(2n) {
+    margin-right: 5.8823529412%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .product-attributes-wrapper {
+    font-size: 0.8rem;
+  }
+  
+  .storefront-sorting {
+    font-size: $font-size-sm;
+    @include flex(column, initial, flex-end);
+    margin-bottom: $spacing-lg - 10px;
+  }
+}
+
+@include tablet {
+  .wcpscwc-product-slider button.slick-next {
+    right: -24px !important;
+  }
+  
+  .wcpscwc-product-slider button.slick-prev {
+    left: -24px !important;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+} 
+
+.woocommerce-pagination {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .woocommerce-pagination {
+    display: none;
+  }
+}
